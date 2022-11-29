@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?><!-- translate 标签表示缩放动画 -->
+<!-- duration : 动画持续时间，单位为毫秒，必须设置此属性，动画才会有效果 -->
+<!-- fillAfter : 动画播放完后，视图是否会停留在动画结束的状态，优先级高于fillBefore值，默认为false -->
+<!-- fillBefore : 动画播放完后，视图是否会停留在动画开始的状态，默认为true -->
+<!-- fillEnabled : 是否应用fillBefore值，对fillAfter值无影响，默认为true -->
+<!-- repeatCount : 重放次数（动画播放的次数=重放次数+1），位infinite时无限重复 -->
+<!-- repeatMode : 重复播放动画模式，restart表示正序重放，reverse表示倒序回放，默认为restart -->
+<!-- startOffset : 动画延迟开始时间，单位为毫秒 -->
+
+<!-- fromAlpha : 视图在水平方向x的起始缩放倍数-->
+<!-- toAlpha : 动画在水平方向x的结束缩放倍数 -->
+
+<alpha xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="3000"
+    android:fillAfter="false"
+    android:fillBefore="true"
+    android:fromAlpha="1"
+    android:fromXScale="0.0"
+    android:fromYScale="0.0"
+    android:repeatCount="2"
+    android:repeatMode="reverse"
+    android:startOffset="1000"
+    android:toAlpha="0" />
+

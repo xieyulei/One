@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">One</string>
+    <!--  Animation  -->
+    <string name="android_animation">Android动画</string>
+    <string name="activity_animation">Activity动画切换效果</string>
+
+    <string name="anim_alpha_code">透明度动画-code</string>
+    <string name="anim_alpha_xml">透明度动画-xml</string>
+    <string name="anim_rotate_code">旋转动画-code</string>
+    <string name="anim_rotate_xml">旋转动画-xml</string>
+    <string name="anim_scale_code">缩放动画-code</string>
+    <string name="anim_scale_xml">缩放动画-xml</string>
+    <string name="anim_translate_code">平移动画-code</string>
+    <string name="anim_translate_xml">平移动画-xml</string>
+    <string name="tween_animation">补间动画</string>
+</resources>

@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">One</string>
+    <!--  Animation  -->
+    <string name="android_animation">Android Animation</string>
+    <string name="activity_animation">Activity Animation Change</string>
+
+    <string name="anim_alpha_code">Alpha Code</string>
+    <string name="anim_alpha_xml">Alpha xml</string>
+    <string name="anim_rotate_code">Rotate code</string>
+    <string name="anim_rotate_xml">Rotate xml</string>
+    <string name="anim_scale_code">Scale code</string>
+    <string name="anim_scale_xml">Scale xml</string>
+    <string name="anim_translate_code">Translate code</string>
+    <string name="anim_translate_xml">Translate xml</string>
+    <string name="tween_animation">Tween Animation</string>
+</resources>
