@@ -11,7 +11,7 @@
         android:layout_height="0dp"
         android:layout_marginStart="@dimen/sp_24"
         android:gravity="center|start"
-        android:text="@string/fragment_two"
+        android:text="@string/title_two_fragment"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/rv_item_iv"
         app:layout_constraintStart_toStartOf="parent"

@@ -40,5 +40,9 @@ class AnimationActivity : AppCompatActivity() {
         mBinding.btnFrameAnim.setOnClickListener {
             startActivity(Intent(this@AnimationActivity, FrameAnimActivity::class.java))
         }
+
+        mBinding.btnPropertyAnim.setOnClickListener {
+            startActivity(Intent(this@AnimationActivity, PropertyAnimActivity::class.java))
+        }
     }
 }

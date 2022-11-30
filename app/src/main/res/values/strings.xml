@@ -1,24 +1,29 @@
 <resources>
     <string name="app_name">One</string>
     <!--  Animation  -->
-    <string name="android_animation">Android Animation</string>
-    <string name="activity_animation">Activity Animation Change</string>
-    <string name="fragment_animation">Fragment Animation Change</string>
-    <string name="fragment_btn_replace">Replace Fragment</string>
-    <string name="fragment_one">One Fragment</string>
-    <string name="fragment_two">Two Fragment</string>
-    <string name="fragment_list">List Fragment</string>
-    <string name="activity_frame">Frame Animation</string>
+    <string name="btn_android_animation">Android Animation</string>
+    <string name="btn_activity_animation">Activity Animation Change</string>
+    <string name="btn_fragment_animation">Fragment Animation Change</string>
+    <string name="btn_replace_fragment">Replace Fragment</string>
+    <string name="btn_start_property_ofInt">Property ofInt</string>
+    <string name="btn_start_property_ofObject">Property ofObject</string>
+    <string name="title_one_fragment">One Fragment</string>
+    <string name="title_two_fragment">Two Fragment</string>
+    <string name="title_list_fragment">List Fragment</string>
+    <string name="title_frame_activity">Frame Animation</string>
+    <string name="title_property_activity">Property Animation</string>
+
     <string name="fruit_text">Fruit</string>
 
-    <string name="anim_alpha_code">Alpha Code</string>
-    <string name="anim_alpha_xml">Alpha xml</string>
-    <string name="anim_rotate_code">Rotate code</string>
-    <string name="anim_rotate_xml">Rotate xml</string>
-    <string name="anim_scale_code">Scale code</string>
-    <string name="anim_scale_xml">Scale xml</string>
-    <string name="anim_translate_code">Translate code</string>
-    <string name="anim_translate_xml">Translate xml</string>
+    <string name="tween_anim_alpha_code">Alpha Code</string>
+    <string name="tween_anim_alpha_xml">Alpha xml</string>
+    <string name="tween_anim_rotate_code">Rotate code</string>
+    <string name="tween_anim_rotate_xml">Rotate xml</string>
+    <string name="tween_anim_scale_code">Scale code</string>
+    <string name="tween_anim_scale_xml">Scale xml</string>
+    <string name="tween_anim_translate_code">Translate code</string>
+    <string name="tween_anim_translate_xml">Translate xml</string>
+
     <string name="frame_anim_start_xml">Start Xml</string>
     <string name="frame_anim_stop_xml">Stop Xml</string>
     <string name="frame_anim_start_code">Start Code</string>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- duration : 动画持续时间，单位为毫秒，必须设置此属性，动画才会有效果 -->
+<!-- fillAfter : 动画播放完后，视图是否会停留在动画结束的状态，优先级高于fillBefore值，默认为false -->
+<!-- fillBefore : 动画播放完后，视图是否会停留在动画开始的状态，默认为true -->
+<!-- fillEnabled : 是否应用fillBefore值，对fillAfter值无影响，默认为true -->
+<!-- repeatCount : 重放次数（动画播放的次数=重放次数+1），位infinite时无限重复 -->
+<!-- repeatMode : 重复播放动画模式，restart表示正序重放，reverse表示倒序回放，默认为restart -->
+<!-- startOffset : 动画延迟开始时间，单位为毫秒 -->
+
+<!-- valueFrom : 初始值 -->
+<!-- valueTo : 结束值 -->
+<!-- valueType : 变化值类型：floatType & intType -->
+
+<animator xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="3000"
+    android:fillAfter="false"
+    android:fillBefore="true"
+    android:fillEnabled="true"
+    android:repeatCount="0"
+    android:repeatMode="restart"
+    android:startOffset="1000"
+    android:valueFrom="0"
+    android:valueTo="3"
+    android:valueType="intType" />
