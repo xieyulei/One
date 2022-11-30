@@ -28,6 +28,7 @@
         <activity android:name=".animation.TransActAnimActivity" />
         <activity android:name=".animation.TransFragAnimActivity" />
         <activity android:name=".animation.ListAnimActivity" />
+        <activity android:name=".animation.FrameAnimActivity" />
 
     </application>
 </manifest>

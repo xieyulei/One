@@ -8,6 +8,7 @@
     <string name="fragment_one">One Fragment</string>
     <string name="fragment_two">Two Fragment</string>
     <string name="fragment_list">List Fragment</string>
+    <string name="activity_frame">Frame Animation</string>
     <string name="fruit_text">水果</string>
 
     <string name="anim_alpha_code">透明度动画-code</string>
@@ -18,5 +19,9 @@
     <string name="anim_scale_xml">缩放动画-xml</string>
     <string name="anim_translate_code">平移动画-code</string>
     <string name="anim_translate_xml">平移动画-xml</string>
+    <string name="frame_anim_start_xml">开始动画—Xml</string>
+    <string name="frame_anim_stop_xml">终止动画—Xml</string>
+    <string name="frame_anim_start_code">开始动画—Code</string>
+    <string name="frame_anim_stop_code">终止动画—Code</string>
     <string name="tween_animation">补间动画</string>
 </resources>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+
+    <!-- oneshot: 设置只播放一次，默认为false -->
+    <!-- drawable: 动画资源，duration: 设置一帧持续的时间，单位为毫秒 -->
+    <item
+        android:drawable="@drawable/vkq1"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/vkq2"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/vkq3"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/vkq4"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/vkq5"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/vkq6"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/vkq7"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/vkq8"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/vkq9"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/vkq10"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/vkq11"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/vkq12"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/vkq13"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/vkq14"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/vkq15"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/vkq16"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/vkq17"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/vkq18"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/vkq19"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/vkq20"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/vkq21"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/vkq22"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/vkq23"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/vkq24"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/vkq25"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/vkq26"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/vkq27"
+        android:duration="100" />
+
+</animation-list>

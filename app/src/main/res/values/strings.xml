@@ -8,6 +8,7 @@
     <string name="fragment_one">One Fragment</string>
     <string name="fragment_two">Two Fragment</string>
     <string name="fragment_list">List Fragment</string>
+    <string name="activity_frame">Frame Animation</string>
     <string name="fruit_text">Fruit</string>
 
     <string name="anim_alpha_code">Alpha Code</string>
@@ -18,5 +19,11 @@
     <string name="anim_scale_xml">Scale xml</string>
     <string name="anim_translate_code">Translate code</string>
     <string name="anim_translate_xml">Translate xml</string>
+    <string name="frame_anim_start_xml">Start Xml</string>
+    <string name="frame_anim_stop_xml">Stop Xml</string>
+    <string name="frame_anim_start_code">Start Code</string>
+    <string name="frame_anim_stop_code">Stop Code</string>
     <string name="tween_animation">Tween Animation</string>
+
+
 </resources>
