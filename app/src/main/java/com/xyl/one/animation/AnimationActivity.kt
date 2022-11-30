@@ -26,7 +26,15 @@ class AnimationActivity : AppCompatActivity() {
         }
 
         mBinding.btnActivityAnim.setOnClickListener {
-            startActivity(Intent(this@AnimationActivity, TransformAnimActivity::class.java))
+            startActivity(Intent(this@AnimationActivity, TransActAnimActivity::class.java))
+        }
+
+        mBinding.btnFragmentAnim.setOnClickListener {
+            startActivity(Intent(this@AnimationActivity, TransFragAnimActivity::class.java))
+        }
+
+        mBinding.btnListAnim.setOnClickListener {
+            startActivity(Intent(this@AnimationActivity, ListAnimActivity::class.java))
         }
     }
 }

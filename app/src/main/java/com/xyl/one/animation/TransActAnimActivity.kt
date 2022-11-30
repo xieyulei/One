@@ -3,7 +3,7 @@ package com.xyl.one.animation
 import android.os.Bundle
 import androidx.appcompat.R
 import androidx.appcompat.app.AppCompatActivity
-import com.xyl.one.databinding.ActivityTransformAnimBinding
+import com.xyl.one.databinding.ActivityTransActAnimBinding
 
 /**
  * Copyright (c) 2022 Raysharp.cn. All rights reserved.
@@ -29,14 +29,14 @@ import com.xyl.one.databinding.ActivityTransformAnimBinding
  * enterAnim：进入其他Activity时 进入Activity的动画效果资源ID
  * exitAnim：进入其他Activity时 该Activity离开时的动画效果资源ID
  */
-class TransformAnimActivity : AppCompatActivity() {
+class TransActAnimActivity : AppCompatActivity() {
 
-    private lateinit var mBinding: ActivityTransformAnimBinding
+    private lateinit var mBinding: ActivityTransActAnimBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         overridePendingTransition(R.anim.abc_fade_in, R.anim.abc_fade_out)
-        mBinding = ActivityTransformAnimBinding.inflate(layoutInflater)
+        mBinding = ActivityTransActAnimBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
     }
 

@@ -3,6 +3,12 @@
     <!--  Animation  -->
     <string name="android_animation">Android动画</string>
     <string name="activity_animation">Activity动画切换效果</string>
+    <string name="fragment_animation">Fragment动画切换效果</string>
+    <string name="fragment_btn_replace">替换Fragment</string>
+    <string name="fragment_one">One Fragment</string>
+    <string name="fragment_two">Two Fragment</string>
+    <string name="fragment_list">List Fragment</string>
+    <string name="fruit_text">水果</string>
 
     <string name="anim_alpha_code">透明度动画-code</string>
     <string name="anim_alpha_xml">透明度动画-xml</string>

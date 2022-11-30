@@ -3,6 +3,12 @@
     <!--  Animation  -->
     <string name="android_animation">Android Animation</string>
     <string name="activity_animation">Activity Animation Change</string>
+    <string name="fragment_animation">Fragment Animation Change</string>
+    <string name="fragment_btn_replace">Replace Fragment</string>
+    <string name="fragment_one">One Fragment</string>
+    <string name="fragment_two">Two Fragment</string>
+    <string name="fragment_list">List Fragment</string>
+    <string name="fruit_text">Fruit</string>
 
     <string name="anim_alpha_code">Alpha Code</string>
     <string name="anim_alpha_xml">Alpha xml</string>

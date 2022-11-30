@@ -25,9 +25,9 @@
         </activity>
         <activity android:name=".animation.AnimationActivity" />
         <activity android:name=".animation.TweenAnimActivity" />
-        <activity android:name=".animation.TransformAnimActivity" />
+        <activity android:name=".animation.TransActAnimActivity" />
+        <activity android:name=".animation.TransFragAnimActivity" />
+        <activity android:name=".animation.ListAnimActivity" />
 
     </application>
-
-
 </manifest>
