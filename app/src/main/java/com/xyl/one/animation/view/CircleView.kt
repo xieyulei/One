@@ -1,4 +1,4 @@
-package com.xyl.one.animation.property
+package com.xyl.one.animation.view
 
 import android.animation.ValueAnimator
 import android.content.Context
@@ -8,6 +8,7 @@ import android.graphics.Paint
 import android.util.AttributeSet
 import android.view.View
 import com.xyl.one.animation.PropertyAnimActivity.Point
+import com.xyl.one.animation.evaluator.CircleViewEvaluator
 
 /**
  * Copyright (c) 2022 Raysharp.cn. All rights reserved.

@@ -35,6 +35,15 @@
         app:layout_constraintTop_toTopOf="@id/guideline3" />
 
     <Button
+        android:id="@+id/btn_property_of_trans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_property_trans_of_object"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="@id/guideLine1"
+        app:layout_constraintTop_toBottomOf="@id/btn_property_of_int" />
+
+    <Button
         android:id="@+id/btn_property_of_object"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -42,6 +51,15 @@
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="@id/guideline2"
         app:layout_constraintTop_toTopOf="@id/guideline3" />
+
+    <Button
+        android:id="@+id/btn_property_manual_of_object"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_property_manual_of_object"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@id/btn_property_of_object" />
 
     <TextView
         android:id="@+id/tv_number"
@@ -56,12 +74,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.xyl.one.animation.property.CircleView
+    <com.xyl.one.animation.view.CircleView
         android:id="@+id/circle_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         app:layout_constraintStart_toStartOf="@id/guideLine1"
         app:layout_constraintTop_toBottomOf="@id/btn_property_of_int" />
+
+    <com.xyl.one.animation.view.ColorCircleView
+        android:id="@+id/color_circle_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintStart_toStartOf="@id/guideLine1"
+        app:layout_constraintTop_toBottomOf="@id/tv_number" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,6 +7,8 @@
     <string name="btn_replace_fragment">Replace Fragment</string>
     <string name="btn_start_property_ofInt">Property ofInt</string>
     <string name="btn_start_property_ofObject">Property ofObject</string>
+    <string name="btn_property_manual_of_object">Property 手动ofObject</string>
+    <string name="btn_property_trans_of_object">Property Trans</string>
     <string name="title_one_fragment">One Fragment</string>
     <string name="title_two_fragment">Two Fragment</string>
     <string name="title_list_fragment">List Fragment</string>

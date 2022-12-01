@@ -1,8 +1,11 @@
 package com.xyl.one.animation
 
+import android.animation.ObjectAnimator
 import android.animation.ValueAnimator
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.xyl.one.animation.evaluator.ColorEvaluator
 import com.xyl.one.databinding.ActivityPropertyAnimBinding
 
 /**
@@ -23,8 +26,8 @@ import com.xyl.one.databinding.ActivityPropertyAnimBinding
  *      辅助使用类：插值器 & 估值器
  *
  * ValueAnimator与ObjectAnimator的区别：
- *      ValueAnimator类：不断改变值，然后手动赋值给对象的属性从而实现动画效果，是间接对对象属性进行操作
- *      ObjectAnimator类：不断改变值，然后自动赋值给对象的属性从而实现动画效果，是间接对对象属性进行操作
+ *      ValueAnimator类：不断改变值，然后[手动]赋值给对象的属性从而实现动画效果，是间接对对象属性进行操作
+ *      ObjectAnimator类：不断改变值，然后[自动]赋值给对象的属性从而实现动画效果，是直接对对象属性进行操作
  *      因此，ObjectAnimator类的使用更加智能、自动化程度更高。
  */
 class PropertyAnimActivity : AppCompatActivity() {
@@ -58,9 +61,61 @@ class PropertyAnimActivity : AppCompatActivity() {
         }
 
         mBinding.btnPropertyOfObject.setOnClickListener {
+            // 属性动画--ObjectAnimator [ https://carsonho.blog.csdn.net/article/details/99712272 ]
+            // 属性动画--插值器、估值器
+            ObjectAnimator.ofObject(mBinding.colorCircleView, "color", ColorEvaluator(), "#0000FF0", "#FF0000").apply {
+                duration = 3000
+            }.start()
+        }
 
+
+        mBinding.btnPropertyOfTrans.setOnClickListener {
+//            ObjectAnimator.ofFloat(mBinding.tvNumber, "translationX",
+//                mBinding.colorCircleView.translationX, 300f, mBinding.tvNumber.translationX).apply {
+//                duration = 3000
+//            }.start()
+
+//            ObjectAnimator.ofFloat(mBinding.tvNumber, "rotation", 0f, 360f).apply {
+//                duration = 3000
+//            }.start()
+//
+//            ObjectAnimator.ofFloat(mBinding.tvNumber, "scaleX", 1f, 3f, 1f).apply {
+//                duration = 3000
+//            }.start()
+
+            ObjectAnimator.ofFloat(mBinding.tvNumber, "alpha", 1f, 0f, 1f).apply {
+                duration = 3000
+            }.start()
+        }
+
+        /***
+         * 手动设置对象属性的set/get方法
+         *
+         * 直接法：通过继承原始类，直接给类加上该属性的get、set方法
+         * 间接法：通过包装原始动画对象，间接给对象加上该属性的get/set方法，即用一个类来包装原始对象
+         * https://carsonho.blog.csdn.net/article/details/99712272#t12   【案例来源于：第5特别说明】
+         * 当该对象本身无这个属性时，一般采用使用第一种方式，例如View的setWidth比
+         */
+        mBinding.btnPropertyManualOfObject.setOnClickListener {
+            // 属性动画--ObjectAnimator [ https://carsonho.blog.csdn.net/article/details/99712272 ]
+            // 属性动画--插值器、估值器
+            ObjectAnimator.ofInt(ViewWrapper(mBinding.tvNumber), "width", 1000).apply {
+                duration = 3000
+            }.start()
         }
     }
+
+    inner class ViewWrapper(private val targetView: View) {
+        fun getWidth(): Int {
+            return targetView.layoutParams.width
+        }
+
+        fun setWidth(width: Int) {
+            targetView.layoutParams.width = width
+            targetView.requestLayout()
+        }
+    }
+
 
     data class Point(val x: Float, val y: Float)
 }

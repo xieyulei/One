@@ -1,4 +1,4 @@
-package com.xyl.one.animation.property
+package com.xyl.one.animation.evaluator
 
 import android.animation.TypeEvaluator
 import com.xyl.one.animation.PropertyAnimActivity.Point
