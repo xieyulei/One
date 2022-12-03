@@ -6,6 +6,7 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.xyl.one.animation.AnimationActivity
 import com.xyl.one.databinding.ActivityMainBinding
+import com.xyl.one.recycler.RecyclerViewActivity
 
 /**
  * Copyright (c) 2022 Raysharp.cn. All rights reserved.
@@ -23,8 +24,13 @@ class MainActivity : AppCompatActivity() {
         mBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
         Log.e("xyl", "This is MainActivity.")
-        mBinding.btnAnimation.setOnClickListener {
-            startActivity(Intent(this@MainActivity, AnimationActivity::class.java))
+        mBinding.apply {
+            btnAnimation.setOnClickListener {
+                startActivity(Intent(this@MainActivity, AnimationActivity::class.java))
+            }
+            btnRecycler.setOnClickListener {
+                startActivity(Intent(this@MainActivity, RecyclerViewActivity::class.java))
+            }
         }
     }
 }

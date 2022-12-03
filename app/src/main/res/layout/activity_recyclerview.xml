@@ -5,44 +5,34 @@
     android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/gl_ver_0.05"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.05" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/gl_ver_0.95"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.95" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/gl_hor_0.05"
+        android:id="@+id/guideLine1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.05" />
 
-    <Button
-        android:id="@+id/btn_animation"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/btn_android_animation"
-        android:textAllCaps="false"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@id/gl_ver_0.05"
-        app:layout_constraintTop_toTopOf="@id/gl_hor_0.05" />
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
 
     <Button
-        android:id="@+id/btn_recycler"
+        android:id="@+id/btn_normal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/btn_android_recyclerview"
+        android:text="@string/recycler_normal_list"
         android:textAllCaps="false"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@id/gl_ver_0.05"
-        app:layout_constraintTop_toBottomOf="@id/btn_animation" />
+        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintTop_toTopOf="@id/guideLine1" />
 
+    <Button
+        android:id="@+id/btn_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recycler_group_title"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@id/btn_normal" />
 </androidx.constraintlayout.widget.ConstraintLayout>

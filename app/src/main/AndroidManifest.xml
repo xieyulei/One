@@ -30,6 +30,9 @@
         <activity android:name=".animation.ListAnimActivity" />
         <activity android:name=".animation.FrameAnimActivity" />
         <activity android:name=".animation.PropertyAnimActivity" />
+        <activity android:name=".recycler.RecyclerViewActivity" />
+        <activity android:name=".recycler.NormalRvListActivity" />
+        <activity android:name=".recycler.GroupRvListActivity" />
 
     </application>
 </manifest>

@@ -2,6 +2,10 @@
     <string name="app_name">One</string>
     <!--  Animation  -->
     <string name="btn_android_animation">Android Animation</string>
+    <string name="btn_android_recyclerview">Android RecyclerView</string>
+
+
+    <!--  Animation  -->
     <string name="btn_activity_animation">Activity Animation Change</string>
     <string name="btn_fragment_animation">Fragment Animation Change</string>
     <string name="btn_replace_fragment">Replace Fragment</string>
@@ -14,8 +18,6 @@
     <string name="title_list_fragment">List Fragment</string>
     <string name="title_frame_activity">Frame Animation</string>
     <string name="title_property_activity">Property Animation</string>
-
-    <string name="fruit_text">Fruit</string>
 
     <string name="tween_anim_alpha_code">Alpha Code</string>
     <string name="tween_anim_alpha_xml">Alpha xml</string>
@@ -32,5 +34,12 @@
     <string name="frame_anim_stop_code">Stop Code</string>
     <string name="tween_animation">Tween Animation</string>
 
+    <!-- RecyclerView.md -->
+    <string name="recycler_normal_list">Normal List:普通列表</string>
+    <string name="recycler_header_title">Header Title</string>
+    <string name="recycler_group_title">Group Layout:分组布局</string>
+    <string name="recycler_btn_add">Add Item</string>
 
+    <!--  common  -->
+    <string name="fruit_text">Fruit</string>
 </resources>
