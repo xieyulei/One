@@ -38,6 +38,11 @@
     <string name="recycler_normal_list">Normal List:普通列表</string>
     <string name="recycler_header_title">Header Title</string>
     <string name="recycler_group_title">Group Layout:分组布局</string>
+    <string name="recycler_node_tree_list_title">树形折叠列表</string>
+    <string name="recycler_node_grid_list_title">网格形折叠列表</string>
+    <string name="recycler_node_first_title">第一层</string>
+    <string name="recycler_node_second_title">第二层</string>
+    <string name="recycler_node_third_title">第三层</string>
     <string name="recycler_btn_add">Add Item</string>
     <string name="recycler_add_text">Add</string>
     <string name="recycler_delete_text">Delete</string>

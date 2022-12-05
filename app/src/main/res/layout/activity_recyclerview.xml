@@ -35,4 +35,22 @@
         android:textAllCaps="false"
         app:layout_constraintStart_toStartOf="@id/guideline2"
         app:layout_constraintTop_toBottomOf="@id/btn_normal" />
+
+    <Button
+        android:id="@+id/btn_node_tree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recycler_node_tree_list_title"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@id/btn_group" />
+
+    <Button
+        android:id="@+id/btn_node_grid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recycler_node_grid_list_title"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@id/btn_node_tree" />
 </androidx.constraintlayout.widget.ConstraintLayout>

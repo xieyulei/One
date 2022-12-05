@@ -33,6 +33,8 @@
         <activity android:name=".recycler.RecyclerViewActivity" />
         <activity android:name=".recycler.NormalRvListActivity" />
         <activity android:name=".recycler.GroupRvListActivity" />
+        <activity android:name=".recycler.node.NodeTreeListActivity" />
+        <activity android:name=".recycler.node.NodeGridListActivity" />
 
     </application>
 </manifest>
