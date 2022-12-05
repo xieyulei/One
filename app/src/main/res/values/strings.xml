@@ -39,6 +39,8 @@
     <string name="recycler_header_title">Header Title</string>
     <string name="recycler_group_title">Group Layout:分组布局</string>
     <string name="recycler_btn_add">Add Item</string>
+    <string name="recycler_add_text">Add</string>
+    <string name="recycler_delete_text">Delete</string>
 
     <!--  common  -->
     <string name="fruit_text">Fruit</string>

@@ -2,6 +2,7 @@ package com.xyl.one.recycler
 
 import android.animation.Animator
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
@@ -13,7 +14,7 @@ import com.chad.library.adapter.base.viewholder.BaseViewHolder
 import com.xyl.one.R
 import com.xyl.one.databinding.ActivityNormalListBinding
 import com.xyl.one.databinding.RvItemFooterBinding
-import com.xyl.one.databinding.RvItemHeaderBinding
+import com.xyl.one.databinding.RvItemHeaderPlusBinding
 
 /**
  * Copyright (c) 2022 Raysharp.cn. All rights reserved.
@@ -26,6 +27,10 @@ class NormalRvListActivity : AppCompatActivity() {
 
     private lateinit var mBinding: ActivityNormalListBinding
     private lateinit var mNormalListAdapter: NormalListAdapter
+
+    companion object {
+        private const val DELETE = 1
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,16 +58,17 @@ class NormalRvListActivity : AppCompatActivity() {
         mNormalListAdapter.apply {
 
             // addFooterView可以设置view的位置，设定在列表中的位置，setFootView默认在最后一个,header也是如此
-            val headerBinding = RvItemHeaderBinding.inflate(layoutInflater)
-            setHeaderView(headerBinding.root)
-            headerBinding.rvItemLayout.setOnClickListener {
+            setHeaderView(getHeaderView(0) {
                 Toast.makeText(this@NormalRvListActivity, "Click Header", Toast.LENGTH_SHORT).show()
-            }
+                addHeaderView(getHeaderView(1, getRemoveHeaderListener()), 0)
+            })
 
             // addFooter
             val footerBinding = RvItemFooterBinding.inflate(layoutInflater)
             setFooterView(footerBinding.root)
             footerBinding.rvItemLayout.setOnClickListener {
+                data.add(Fruit("Fruit_Add", R.drawable.ic_add))
+                notifyItemInserted(this.data.size)
                 Toast.makeText(this@NormalRvListActivity, "Click Footer", Toast.LENGTH_SHORT).show()
             }
 
@@ -116,4 +122,21 @@ class NormalRvListActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * 获取将要被添加的header
+     */
+    private fun getHeaderView(type: Int, listener: View.OnClickListener): View {
+        val headerBinding = RvItemHeaderPlusBinding.inflate(layoutInflater).apply {
+            if (type == DELETE) {
+                rvItemHeaderPlusTitle.text = getString(R.string.recycler_delete_text)
+                rvItemHeaderPlusIv.setImageResource(R.drawable.ic_delete)
+            }
+            rvItemLayout.setOnClickListener(listener)
+        }
+        return headerBinding.root
+    }
+
+    private fun getRemoveHeaderListener(): View.OnClickListener {
+        return View.OnClickListener { v -> mNormalListAdapter.removeHeaderView(v) }
+    }
 }
