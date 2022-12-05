@@ -1,9 +1,9 @@
 package com.xyl.one.recycler
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.chad.library.adapter.base.BaseSectionQuickAdapter
@@ -40,6 +40,17 @@ class GroupRvListActivity : AppCompatActivity() {
             val decoration = DividerItemDecoration(this@GroupRvListActivity, LinearLayoutManager.VERTICAL)
             addItemDecoration(decoration)
             adapter = mAdapter
+        }
+        mAdapter.setOnItemClickListener { _, _, position ->
+            val groupFruit = mAdapter.data[position]
+            when (groupFruit.isHeader) {
+                true -> {
+                    Toast.makeText(this@GroupRvListActivity, "Header position = $position", Toast.LENGTH_SHORT).show()
+                }
+                false -> {
+                    Toast.makeText(this@GroupRvListActivity, "Item position = $position", Toast.LENGTH_SHORT).show()
+                }
+            }
         }
     }
 
