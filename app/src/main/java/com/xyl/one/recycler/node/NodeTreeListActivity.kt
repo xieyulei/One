@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.chad.library.adapter.base.BaseNodeAdapter
 import com.xyl.one.databinding.ActivityNodeTreeListBinding
+import com.xyl.one.databinding.RvEmptyBinding
 import com.xyl.one.recycler.getNodeTreeListData
 
 /**
@@ -29,10 +30,16 @@ class NodeTreeListActivity : AppCompatActivity() {
 
     private fun initRecyclerView() {
         mAdapter = NodeTreeAdapter()
+        val emptyView = RvEmptyBinding.inflate(layoutInflater)
+        mAdapter.setEmptyView(emptyView.root)
         mBinding.nodeTreeRv.apply {
             layoutManager = LinearLayoutManager(this@NodeTreeListActivity)
             adapter = mAdapter
+            postDelayed({
+                mAdapter.setList(getNodeTreeListData())
+            }, 3000)
         }
-        mAdapter.setList(getNodeTreeListData())
+
+
     }
 }

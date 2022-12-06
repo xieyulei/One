@@ -49,4 +49,5 @@
 
     <!--  common  -->
     <string name="fruit_text">Fruit</string>
+    <string name="rv_data_empty_text">Data is empty!</string>
 </resources>

@@ -14,7 +14,11 @@ import com.xyl.one.recycler.ThirdNode
  * @author xieyulei
  * @date 2022-12-05
  */
-class NodeTreeAdapter(val mList: MutableList<BaseNode>? = null) : BaseNodeAdapter() {
+class NodeTreeAdapter(mList: MutableList<BaseNode>? = null) : BaseNodeAdapter(mList) {
+
+    companion object {
+        const val EXPAND_COLLAPSE_PAYLOAD = 110
+    }
 
     init {
         addNodeProvider(FirstProvider())

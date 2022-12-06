@@ -50,10 +50,19 @@ fun getGroupListData(): MutableList<GroupFruit> {
  * 折叠列表的几种类型
  */
 class FirstNode(val title: String, val imageId: Int, override val childNode: MutableList<BaseNode>?) :
-    BaseExpandNode()
+    BaseExpandNode() {
+    init {
+        isExpanded = false
+    }
+}
+
 
 class SecondNode(val title: String, val imageId: Int, override val childNode: MutableList<BaseNode>?) :
-    BaseExpandNode()
+    BaseExpandNode() {
+    init {
+        isExpanded = false
+    }
+}
 
 class ThirdNode(val title: String, val imageId: Int, override val childNode: MutableList<BaseNode>? = null) : BaseNode()
 
@@ -76,9 +85,13 @@ fun getNodeTreeListData(): MutableList<BaseNode> {
             }
 
             val secondNode = SecondNode("Second Node $j", R.mipmap.ic_launcher, thirdList)
+            secondNode.isExpanded = (j == 0)
             secondList.add(secondNode)
         }
         val firstNode = FirstNode("Fist Node $i", R.mipmap.ic_launcher, secondList)
+
+        // 模拟 默认第0个是展开的
+        firstNode.isExpanded = (i == 0)
         firstList.add(firstNode)
     }
     return firstList

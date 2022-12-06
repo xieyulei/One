@@ -228,17 +228,226 @@ private fun initRecyclerView() {
 
 ```
 
-11.多布局
+11.树形层级列表
+
+```kotlin
+    多布局关键点：
+        1)构建三种类型的实体类，有子项的类，继承BaseExpandNode类，无子项的类继承BaseNode
+        2)构建每种类型对应的Provider,处理他的convert方法和onClick
+        3)构建包含层级的数据源
+        4)自定义适配器，继承自BaseNodeAdapter，添加Provider以及重写getItemType为每种类型设置一个值区分类型
+        5)RecyclerView设置adapter，layoutManager以及其他属性，放入数据源显示
+
+/**
+ * 折叠列表的几种类型
+ */
+class FirstNode(val title: String, val imageId: Int, override val childNode: MutableList<BaseNode>?) :
+    BaseExpandNode() {
+    init {
+        isExpanded = false
+    }
+}
+
+
+class SecondNode(val title: String, val imageId: Int, override val childNode: MutableList<BaseNode>?) :
+    BaseExpandNode() {
+    init {
+        isExpanded = false
+    }
+}
+
+class ThirdNode(val title: String, val imageId: Int, override val childNode: MutableList<BaseNode>? = null) : BaseNode()
+
+/**
+ * 自定义Adapter
+ */
+class NodeTreeAdapter(mList: MutableList<BaseNode>? = null) : BaseNodeAdapter(mList) {
+
+    companion object {
+        const val EXPAND_COLLAPSE_PAYLOAD = 110
+    }
+
+    init {
+        addNodeProvider(FirstProvider())
+        addNodeProvider(SecondProvider())
+        addNodeProvider(ThirdProvider())
+    }
+
+    override fun getItemType(data: List<BaseNode>, position: Int) =
+        when (data[position]) {
+            is FirstNode -> ItemType.ITEM_FIRST.itemType
+            is SecondNode -> ItemType.ITEM_SECOND.itemType
+            is ThirdNode -> ItemType.ITEM_THIRD.itemType
+            else -> -1
+        }
+}
+
+/**
+ * 构建Provider
+ */
+// FirstProvider
+class FirstProvider : BaseNodeProvider() {
+    override val itemViewType: Int
+        get() = ItemType.ITEM_FIRST.itemType
+
+    override val layoutId: Int
+        get() = R.layout.rv_item_node_first
+
+    override fun convert(helper: BaseViewHolder, item: BaseNode) {
+        val firstNode = item as FirstNode
+        helper.setText(R.id.tv_node_first, firstNode.title)
+        helper.setImageResource(R.id.iv_node_first, firstNode.imageId)
+
+        setArrowSpin(helper, item, false)
+    }
+
+    override fun convert(helper: BaseViewHolder, item: BaseNode, payloads: List<Any>) {
+        for (payload in payloads) {
+            if (payload is Int && payload == NodeTreeAdapter.EXPAND_COLLAPSE_PAYLOAD) {
+                // 增量刷新，使用动画变化箭头
+                setArrowSpin(helper, item, true)
+            }
+        }
+    }
+
+    private fun setArrowSpin(helper: BaseViewHolder, item: BaseNode, isAnimate: Boolean) {
+        val firstNode = item as FirstNode
+        val imageArrow = helper.getView<ImageView>(R.id.first_iv_arrow)
+
+        if (firstNode.isExpanded) {
+            if (isAnimate) {
+                ViewCompat.animate(imageArrow).setDuration(200).setInterpolator(DecelerateInterpolator()).rotation(0f).start()
+            } else {
+                imageArrow.rotation = 0f
+            }
+        } else {
+            if (isAnimate) {
+                ViewCompat.animate(imageArrow).setDuration(200).setInterpolator(DecelerateInterpolator()).rotation(90f).start()
+            } else {
+                imageArrow.rotation = 90f
+            }
+        }
+    }
+
+    override fun onClick(helper: BaseViewHolder, view: View, data: BaseNode, position: Int) {
+        // 这里使用payload进行增量刷新（避免整个item刷新导致的闪烁，不自然）
+        getAdapter()!!.expandOrCollapse(position, animate = true, notify = true, parentPayload = NodeTreeAdapter.EXPAND_COLLAPSE_PAYLOAD)
+    }
+}
+
+
+// SecondProvider
+class SecondProvider : BaseNodeProvider() {
+    override val itemViewType: Int
+        get() = ItemType.ITEM_SECOND.itemType
+
+    override val layoutId: Int
+        get() = R.layout.rv_item_node_second
+
+    override fun convert(helper: BaseViewHolder, item: BaseNode) {
+        val secondNode = item as SecondNode
+        helper.setText(R.id.tv_node_second, secondNode.title)
+        helper.setImageResource(R.id.iv_node_second, secondNode.imageId)
+
+        if (secondNode.isExpanded) {
+            helper.setImageResource(R.id.second_iv_arrow, R.drawable.ic_arrow_down)
+        } else {
+            helper.setImageResource(R.id.second_iv_arrow, R.drawable.ic_arrow)
+        }
+    }
+
+    override fun onClick(helper: BaseViewHolder, view: View, data: BaseNode, position: Int) {
+        val secondNode = data as SecondNode
+        if (secondNode.isExpanded) {
+            getAdapter()?.collapse(position)
+        } else {
+            getAdapter()?.expandAndCollapseOther(position)
+        }
+    }
+}
+
+// ThirdProvider
+class ThirdProvider : BaseNodeProvider() {
+    override val itemViewType: Int
+        get() = ItemType.ITEM_THIRD.itemType
+
+    override val layoutId: Int
+        get() = R.layout.rv_item_node_third
+
+    override fun convert(helper: BaseViewHolder, item: BaseNode) {
+        val thirdNode = item as ThirdNode
+        helper.setText(R.id.tv_node_third, thirdNode.title)
+        helper.setImageResource(R.id.iv_node_third, thirdNode.imageId)
+    }
+}
+
+/**
+ * 构建数据源
+ */
+fun getNodeTreeListData(): MutableList<BaseNode> {
+    val firstList = mutableListOf<BaseNode>()
+
+    for (i in 0 until 10) {
+        val secondList = mutableListOf<BaseNode>()
+        for (j in 0 until 6) {
+            val thirdList = mutableListOf<BaseNode>()
+            for (k in 0 until 4) {
+                val node = ThirdNode("Third Node $k", R.mipmap.ic_launcher)
+                thirdList.add(node)
+            }
+
+            val secondNode = SecondNode("Second Node $j", R.mipmap.ic_launcher, thirdList)
+            secondNode.isExpanded = (j == 0)
+            secondList.add(secondNode)
+        }
+        val firstNode = FirstNode("Fist Node $i", R.mipmap.ic_launcher, secondList)
+
+        // 模拟 默认第0个是展开的
+        firstNode.isExpanded = (i == 0)
+        firstList.add(firstNode)
+    }
+    return firstList
+}
+
+/**
+ * 显示数据
+ */
+private fun initRecyclerView() {
+    mAdapter = NodeTreeAdapter(getNodeTreeListData())
+    mBinding.nodeTreeRv.apply {
+        layoutManager = LinearLayoutManager(this@NodeTreeListActivity)
+        adapter = mAdapter
+    }
+}
+```
 
 12.设置空布局
+```kotlin
+// 没有数据的时候默认显示该布局 
+val emptyView = RvEmptyBinding.inflate(layoutInflater)
+mAdapter.setEmptyView(emptyView.root)
+```
 
 13.添加拖拽、滑动删除
 
-14.树形列表
+14.多布局
 
 15.自定义ViewHolder
 
 16.混淆
+```kotlin
+-keep class com.chad.library.adapter.** {
+*;
+}
+-keep public class * extends com.chad.library.adapter.base.BaseQuickAdapter
+-keep public class * extends com.chad.library.adapter.base.BaseViewHolder
+-keepclassmembers  class **$** extends com.chad.library.adapter.base.BaseViewHolder {
+<init>(...);
+}
+
+
+```
+
 
 17.扩展框架
 
