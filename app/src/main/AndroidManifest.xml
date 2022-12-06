@@ -4,6 +4,7 @@
     package="com.xyl.one">
 
     <application
+        android:name=".OneApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -23,7 +24,12 @@
             </intent-filter>
 
         </activity>
+
         <activity android:name=".animation.AnimationActivity" />
+        <activity android:name=".jetpack.JetpackActivity" />
+        <activity android:name=".widgets.WidgetsActivity" />
+
+
         <activity android:name=".animation.TweenAnimActivity" />
         <activity android:name=".animation.TransActAnimActivity" />
         <activity android:name=".animation.TransFragAnimActivity" />
