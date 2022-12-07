@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_recycler"
+    app:startDestination="@id/homeRvFragment">
+
+    <fragment
+        android:id="@+id/homeRvFragment"
+        android:name="com.xyl.one.widgets.recycler.fragment.HomeRvFragment"
+        android:label="HomeRvFragment">
+        <action
+            android:id="@+id/home_to_footerHeader"
+            app:destination="@id/footerHeaderRvFragment" />
+        <action
+            android:id="@+id/home_to_moreStyle"
+            app:destination="@id/moreStyleRvFragment" />
+        <action
+            android:id="@+id/home_to_nodeTree"
+            app:destination="@id/treeNodeRvFragment" />
+        <action
+            android:id="@+id/home_to_nodeGrid"
+            app:destination="@id/girdNodeRvFragment" />
+        <action
+            android:id="@+id/home_to_dragItem"
+            app:destination="@id/dragItemRvFragment" />
+        <action
+            android:id="@+id/home_to_slideDelete"
+            app:destination="@id/slideDeleteRvFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/footerHeaderRvFragment"
+        android:name="com.xyl.one.widgets.recycler.fragment.FooterHeaderRvFragment"
+        android:label="FooterHeaderRvFragment">
+        <action
+            android:id="@+id/action_footerHeaderRvFragment_to_homeRvFragment"
+            app:destination="@id/homeRvFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/girdNodeRvFragment"
+        android:name="com.xyl.one.widgets.recycler.fragment.NodeGridRvFragment"
+        android:label="GirdNodeRvFragment">
+        <action
+            android:id="@+id/action_girdNodeRvFragment_to_homeRvFragment"
+            app:destination="@id/homeRvFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dragItemRvFragment"
+        android:name="com.xyl.one.widgets.recycler.fragment.DragItemRvFragment"
+        android:label="DragItemRvFragment">
+        <action
+            android:id="@+id/action_dragItemRvFragment_to_homeRvFragment"
+            app:destination="@id/homeRvFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/moreStyleRvFragment"
+        android:name="com.xyl.one.widgets.recycler.fragment.MoreStyleRvFragment"
+        android:label="MoreStyleRvFragment">
+        <action
+            android:id="@+id/action_moreStyleRvFragment_to_homeRvFragment"
+            app:destination="@id/homeRvFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/slideDeleteRvFragment"
+        android:name="com.xyl.one.widgets.recycler.fragment.SlideDeleteRvFragment"
+        android:label="SlideDeleteRvFragment">
+        <action
+            android:id="@+id/action_slideDeleteRvFragment_to_homeRvFragment"
+            app:destination="@id/homeRvFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/treeNodeRvFragment"
+        android:name="com.xyl.one.widgets.recycler.fragment.NodeTreeRvFragment"
+        android:label="TreeNodeRvFragment">
+        <action
+            android:id="@+id/action_treeNodeRvFragment_to_homeRvFragment"
+            app:destination="@id/homeRvFragment" />
+    </fragment>
+</navigation>

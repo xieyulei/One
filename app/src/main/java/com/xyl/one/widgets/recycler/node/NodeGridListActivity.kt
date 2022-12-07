@@ -1,4 +1,4 @@
-package com.xyl.one.recycler.node
+package com.xyl.one.widgets.recycler.node
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

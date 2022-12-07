@@ -1,4 +1,4 @@
-package com.xyl.one.recycler
+package com.xyl.one.widgets.recycler
 
 import android.animation.Animator
 import android.os.Bundle

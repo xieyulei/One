@@ -11,6 +11,13 @@ import android.content.Intent
  * @date 2022-12-06
  */
 
+/**
+ * 权限修饰符
+ *  public 默认，所有类可见
+ *  private 当前类可见
+ *  protect 当前类、子类可见
+ *  inner 同一模块中的类可见
+ */
 
 /**
  * 根据资源ID返回资源字符串

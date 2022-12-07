@@ -1,11 +1,11 @@
-package com.xyl.one.recycler.node
+package com.xyl.one.widgets.recycler.node
 
 import com.chad.library.adapter.base.BaseNodeAdapter
 import com.chad.library.adapter.base.entity.node.BaseNode
-import com.xyl.one.recycler.FirstNode
-import com.xyl.one.recycler.ItemType
-import com.xyl.one.recycler.SecondNode
-import com.xyl.one.recycler.ThirdNode
+import com.xyl.one.widgets.recycler.FirstNode
+import com.xyl.one.widgets.recycler.ItemType
+import com.xyl.one.widgets.recycler.SecondNode
+import com.xyl.one.widgets.recycler.ThirdNode
 
 /**
  * Copyright (c) 2022 Raysharp.cn. All rights reserved.

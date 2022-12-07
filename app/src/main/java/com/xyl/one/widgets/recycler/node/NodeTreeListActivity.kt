@@ -1,4 +1,4 @@
-package com.xyl.one.recycler.node
+package com.xyl.one.widgets.recycler.node
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.chad.library.adapter.base.BaseNodeAdapter
 import com.xyl.one.databinding.ActivityNodeTreeListBinding
 import com.xyl.one.databinding.RvEmptyBinding
-import com.xyl.one.recycler.getNodeTreeListData
+import com.xyl.one.widgets.recycler.getNodeTreeListData
 
 /**
  * Copyright (c) 2022 Raysharp.cn. All rights reserved.

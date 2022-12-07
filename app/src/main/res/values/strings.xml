@@ -6,6 +6,17 @@
     <string name="main_animation">Animation</string>
     <string name="main_jetpack">Jetpack</string>
 
+    <!--  Widgets  -->
+    <string name="widgets_recyclerview">RecyclerView</string>
+
+    <!--  RecyclerView  -->
+    <string name="recycler_home_title">RecyclerView</string>
+    <string name="recycler_footer_header">Footer Header</string>
+    <string name="recycler_more_style">More Style</string>
+    <string name="recycler_node_grid">Node Grid</string>
+    <string name="recycler_node_tree">Node Tree</string>
+    <string name="recycler_drag_item">Drag Item</string>
+    <string name="recycler_slide_delete">Slide delete</string>
 
     <!--  Animation  -->
     <string name="btn_android_animation">Android Animation</string>

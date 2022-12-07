@@ -2,6 +2,7 @@ package com.xyl.one.widgets
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.xyl.one.R
 import com.xyl.one.databinding.ActivityWidgetsBinding
 
 /**
@@ -19,5 +20,10 @@ class WidgetsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         mBinding = ActivityWidgetsBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
+
+//        val fragment = WidgetsFragment()
+//        supportFragmentManager.beginTransaction()
+//            .add(R.id.widgets_frame, fragment)
+//            .commit()
     }
 }

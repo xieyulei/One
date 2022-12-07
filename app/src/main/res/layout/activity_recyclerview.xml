@@ -4,53 +4,65 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideLine1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.05" />
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/recycler_container"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/nav_recycler" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.05" />
+    <!--    <androidx.constraintlayout.widget.Guideline-->
+    <!--        android:id="@+id/guideLine1"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        app:layout_constraintGuide_percent="0.05" />-->
 
-    <Button
-        android:id="@+id/btn_normal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/recycler_normal_list"
-        android:textAllCaps="false"
-        app:layout_constraintStart_toStartOf="@id/guideline2"
-        app:layout_constraintTop_toTopOf="@id/guideLine1" />
+    <!--    <androidx.constraintlayout.widget.Guideline-->
+    <!--        android:id="@+id/guideline2"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="vertical"-->
+    <!--        app:layout_constraintGuide_percent="0.05" />-->
 
-    <Button
-        android:id="@+id/btn_group"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/recycler_group_title"
-        android:textAllCaps="false"
-        app:layout_constraintStart_toStartOf="@id/guideline2"
-        app:layout_constraintTop_toBottomOf="@id/btn_normal" />
+    <!--    <Button-->
+    <!--        android:id="@+id/btn_normal"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="@string/recycler_normal_list"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        app:layout_constraintStart_toStartOf="@id/guideline2"-->
+    <!--        app:layout_constraintTop_toTopOf="@id/guideLine1" />-->
 
-    <Button
-        android:id="@+id/btn_node_tree"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/recycler_node_tree_list_title"
-        android:textAllCaps="false"
-        app:layout_constraintStart_toStartOf="@id/guideline2"
-        app:layout_constraintTop_toBottomOf="@id/btn_group" />
+    <!--    <Button-->
+    <!--        android:id="@+id/btn_group"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="@string/recycler_group_title"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        app:layout_constraintStart_toStartOf="@id/guideline2"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/btn_normal" />-->
 
-    <Button
-        android:id="@+id/btn_node_grid"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/recycler_node_grid_list_title"
-        android:textAllCaps="false"
-        app:layout_constraintStart_toStartOf="@id/guideline2"
-        app:layout_constraintTop_toBottomOf="@id/btn_node_tree" />
+    <!--    <Button-->
+    <!--        android:id="@+id/btn_node_tree"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="@string/recycler_node_tree_list_title"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        app:layout_constraintStart_toStartOf="@id/guideline2"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/btn_group" />-->
+
+    <!--    <Button-->
+    <!--        android:id="@+id/btn_node_grid"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="@string/recycler_node_grid_list_title"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        app:layout_constraintStart_toStartOf="@id/guideline2"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/btn_node_tree" />-->
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,12 +1,12 @@
-package com.xyl.one.recycler.node
+package com.xyl.one.widgets.recycler.node
 
 import android.view.View
 import com.chad.library.adapter.base.entity.node.BaseNode
 import com.chad.library.adapter.base.provider.BaseNodeProvider
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
 import com.xyl.one.R
-import com.xyl.one.recycler.ItemType
-import com.xyl.one.recycler.SecondNode
+import com.xyl.one.widgets.recycler.ItemType
+import com.xyl.one.widgets.recycler.SecondNode
 
 /**
  * Copyright (c) 2022 Raysharp.cn. All rights reserved.

@@ -11,11 +11,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.xyl.one.animation.AnimationActivity
+import com.xyl.one.data.RvItemBean
+import com.xyl.one.data.getMainList
 import com.xyl.one.databinding.ActivityMainBinding
 import com.xyl.one.jetpack.JetpackActivity
 import com.xyl.one.widgets.WidgetsActivity
-import repository.MainBean
-import repository.getMainList
 
 /**
  * Copyright (c) 2022 Raysharp.cn. All rights reserved.
@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
     /**
      * 自定义适配器
      */
-    class MainRvAdapter(val context: Context, val data: MutableList<MainBean>) : RecyclerView.Adapter<MainRvAdapter.ViewHolder>() {
+    class MainRvAdapter(val context: Context, val data: MutableList<RvItemBean>) : RecyclerView.Adapter<MainRvAdapter.ViewHolder>() {
 
         inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
             val icon: ImageView = view.findViewById(R.id.main_rv_item_icon)
@@ -69,7 +69,7 @@ class MainActivity : AppCompatActivity() {
         override fun getItemCount(): Int = data.size
 
         // 处理子项点击事件
-        private fun onClick(data: MutableList<MainBean>, position: Int) {
+        private fun onClick(data: MutableList<RvItemBean>, position: Int) {
             when (data[position].title) {
                 getString(R.string.main_widgets) -> startActivity<WidgetsActivity>(context)
                 getString(R.string.main_animation) -> startActivity<AnimationActivity>(context)

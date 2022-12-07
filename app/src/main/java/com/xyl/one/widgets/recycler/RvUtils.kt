@@ -1,4 +1,4 @@
-package com.xyl.one.recycler
+package com.xyl.one.widgets.recycler
 
 import com.chad.library.adapter.base.entity.SectionEntity
 import com.chad.library.adapter.base.entity.node.BaseExpandNode

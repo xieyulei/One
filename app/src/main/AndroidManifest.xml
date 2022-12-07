@@ -22,12 +22,12 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
 
         <activity android:name=".animation.AnimationActivity" />
         <activity android:name=".jetpack.JetpackActivity" />
         <activity android:name=".widgets.WidgetsActivity" />
+        <activity android:name=".widgets.recycler.RecyclerViewActivity" />
 
 
         <activity android:name=".animation.TweenAnimActivity" />
@@ -36,11 +36,10 @@
         <activity android:name=".animation.ListAnimActivity" />
         <activity android:name=".animation.FrameAnimActivity" />
         <activity android:name=".animation.PropertyAnimActivity" />
-        <activity android:name=".recycler.RecyclerViewActivity" />
-        <activity android:name=".recycler.NormalRvListActivity" />
-        <activity android:name=".recycler.GroupRvListActivity" />
-        <activity android:name=".recycler.node.NodeTreeListActivity" />
-        <activity android:name=".recycler.node.NodeGridListActivity" />
+        <activity android:name="com.xyl.one.widgets.recycler.NormalRvListActivity" />
+        <activity android:name="com.xyl.one.widgets.recycler.GroupRvListActivity" />
+        <activity android:name="com.xyl.one.widgets.recycler.node.NodeTreeListActivity" />
+        <activity android:name="com.xyl.one.widgets.recycler.node.NodeGridListActivity" />
 
     </application>
 </manifest>
