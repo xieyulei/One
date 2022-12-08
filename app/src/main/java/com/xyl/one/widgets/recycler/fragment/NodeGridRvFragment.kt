@@ -2,7 +2,7 @@ package com.xyl.one.widgets.recycler.fragment
 
 import android.view.LayoutInflater
 import com.xyl.one.base.BaseRecyclerFragment
-import com.xyl.one.databinding.RecylerFragmentNodeGridBinding
+import com.xyl.one.databinding.RecyclerFragmentNodeGridBinding
 
 /**
  * Copyright (c) 2022 Raysharp.cn. All rights reserved.
@@ -11,9 +11,9 @@ import com.xyl.one.databinding.RecylerFragmentNodeGridBinding
  * @author xieyulei
  * @date 2022-12-07
  */
-class NodeGridRvFragment : BaseRecyclerFragment<RecylerFragmentNodeGridBinding>() {
-    override fun inflateViewBinding(inflater: LayoutInflater): RecylerFragmentNodeGridBinding {
-        return RecylerFragmentNodeGridBinding.inflate(inflater)
+class NodeGridRvFragment : BaseRecyclerFragment<RecyclerFragmentNodeGridBinding>() {
+    override fun inflateViewBinding(inflater: LayoutInflater): RecyclerFragmentNodeGridBinding {
+        return RecyclerFragmentNodeGridBinding.inflate(inflater)
     }
 
     override fun initView() {

@@ -10,7 +10,7 @@ import com.xyl.one.R
 import com.xyl.one.base.BaseRecyclerFragment
 import com.xyl.one.data.RvItemBean
 import com.xyl.one.data.getRecyclerHomeList
-import com.xyl.one.databinding.RecylerFragmentHomeBinding
+import com.xyl.one.databinding.RecyclerFragmentHomeBinding
 
 /**
  * Copyright (c) 2022 Raysharp.cn. All rights reserved.
@@ -19,12 +19,12 @@ import com.xyl.one.databinding.RecylerFragmentHomeBinding
  * @author xieyulei
  * @date 2022-12-07
  */
-class HomeRvFragment : BaseRecyclerFragment<RecylerFragmentHomeBinding>() {
+class HomeRvFragment : BaseRecyclerFragment<RecyclerFragmentHomeBinding>() {
 
     private lateinit var mAdapter: HomeRvAdapter
 
-    override fun inflateViewBinding(inflater: LayoutInflater): RecylerFragmentHomeBinding {
-        return RecylerFragmentHomeBinding.inflate(inflater)
+    override fun inflateViewBinding(inflater: LayoutInflater): RecyclerFragmentHomeBinding {
+        return RecyclerFragmentHomeBinding.inflate(inflater)
     }
 
     override fun initView() {
@@ -43,10 +43,12 @@ class HomeRvFragment : BaseRecyclerFragment<RecylerFragmentHomeBinding>() {
         }
         mAdapter.setOnItemClickListener { _, _, position ->
             when (mAdapter.data[position].title) {
+                getString(R.string.recycler_native) -> go(R.id.home_to_native)
                 getString(R.string.recycler_footer_header) -> go(R.id.home_to_footerHeader)
+                getString(R.string.recycler_group) -> go(R.id.home_to_group)
                 getString(R.string.recycler_more_style) -> go(R.id.home_to_moreStyle)
-                getString(R.string.recycler_node_grid) -> go(R.id.home_to_nodeGrid)
                 getString(R.string.recycler_node_tree) -> go(R.id.home_to_nodeTree)
+                getString(R.string.recycler_node_grid) -> go(R.id.home_to_nodeGrid)
                 getString(R.string.recycler_drag_item) -> go(R.id.home_to_dragItem)
                 getString(R.string.recycler_slide_delete) -> go(R.id.home_to_slideDelete)
             }

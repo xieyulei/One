@@ -2,7 +2,6 @@ package com.xyl.one.widgets
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.xyl.one.R
 import com.xyl.one.databinding.ActivityWidgetsBinding
 
 /**

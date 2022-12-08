@@ -72,7 +72,7 @@ class ListAnimActivity : AppCompatActivity() {
     private fun getFruitList(): List<Fruit> {
         val list = mutableListOf<Fruit>()
         repeat(10) {
-            list.add(Fruit(getString(R.string.fruit_text), R.mipmap.ic_launcher))
+            list.add(Fruit(getString(R.string.main_animation), R.mipmap.ic_launcher))
         }
         return list
     }

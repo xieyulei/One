@@ -49,41 +49,4 @@
     <item
         android:drawable="@drawable/vkq15"
         android:duration="100" />
-    <item
-        android:drawable="@drawable/vkq16"
-        android:duration="100" />
-    <item
-        android:drawable="@drawable/vkq17"
-        android:duration="100" />
-    <item
-        android:drawable="@drawable/vkq18"
-        android:duration="100" />
-    <item
-        android:drawable="@drawable/vkq19"
-        android:duration="100" />
-    <item
-        android:drawable="@drawable/vkq20"
-        android:duration="100" />
-    <item
-        android:drawable="@drawable/vkq21"
-        android:duration="100" />
-    <item
-        android:drawable="@drawable/vkq22"
-        android:duration="100" />
-    <item
-        android:drawable="@drawable/vkq23"
-        android:duration="100" />
-    <item
-        android:drawable="@drawable/vkq24"
-        android:duration="100" />
-    <item
-        android:drawable="@drawable/vkq25"
-        android:duration="100" />
-    <item
-        android:drawable="@drawable/vkq26"
-        android:duration="100" />
-    <item
-        android:drawable="@drawable/vkq27"
-        android:duration="100" />
-
 </animation-list>

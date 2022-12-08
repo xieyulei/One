@@ -11,19 +11,25 @@
 
     <!--  RecyclerView  -->
     <string name="recycler_home_title">RecyclerView</string>
+    <string name="recycler_native">Native</string>
     <string name="recycler_footer_header">Footer Header</string>
+    <string name="recycler_group">Group</string>
     <string name="recycler_more_style">More Style</string>
-    <string name="recycler_node_grid">Node Grid</string>
     <string name="recycler_node_tree">Node Tree</string>
+    <string name="recycler_node_grid">Node Grid</string>
     <string name="recycler_drag_item">Drag Item</string>
     <string name="recycler_slide_delete">Slide delete</string>
+    <string name="recycler_node_text_first">First</string>
+    <string name="recycler_node_text_second">Second</string>
+    <string name="recycler_node_text_third">Third</string>
+    <string name="recycler_text_add">Add</string>
+    <string name="recycler_text_data_empty">Data is empty!</string>
+    <string name="recycler_text_delete">Delete</string>
+    <string name="recycler_text_header">Header</string>
 
     <!--  Animation  -->
     <string name="btn_android_animation">Android Animation</string>
     <string name="btn_android_recyclerview">Android RecyclerView</string>
-
-
-    <!--  Animation  -->
     <string name="btn_activity_animation">Activity Animation Change</string>
     <string name="btn_fragment_animation">Fragment Animation Change</string>
     <string name="btn_replace_fragment">Replace Fragment</string>
@@ -52,20 +58,4 @@
     <string name="frame_anim_stop_code">Stop Code</string>
     <string name="tween_animation">Tween Animation</string>
 
-    <!-- RecyclerView.md -->
-    <string name="recycler_normal_list">Normal List:普通列表</string>
-    <string name="recycler_header_title">Header Title</string>
-    <string name="recycler_group_title">Group Layout:分组布局</string>
-    <string name="recycler_node_tree_list_title">树形折叠列表</string>
-    <string name="recycler_node_grid_list_title">网格形折叠列表</string>
-    <string name="recycler_node_first_title">第一层</string>
-    <string name="recycler_node_second_title">第二层</string>
-    <string name="recycler_node_third_title">第三层</string>
-    <string name="recycler_btn_add">Add Item</string>
-    <string name="recycler_add_text">Add</string>
-    <string name="recycler_delete_text">Delete</string>
-
-    <!--  common  -->
-    <string name="fruit_text">Fruit</string>
-    <string name="rv_data_empty_text">Data is empty!</string>
 </resources>

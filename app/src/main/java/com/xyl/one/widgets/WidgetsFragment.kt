@@ -11,8 +11,8 @@ import com.xyl.one.data.RvItemBean
 import com.xyl.one.data.getWidgetsList
 import com.xyl.one.databinding.FragmentWidgetsBinding
 import com.xyl.one.databinding.RvWidgetsItemBinding
-import com.xyl.one.getString
-import com.xyl.one.startActivity
+import com.xyl.one.utils.getString
+import com.xyl.one.utils.startActivity
 import com.xyl.one.widgets.recycler.RecyclerViewActivity
 
 /**

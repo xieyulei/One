@@ -20,7 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="?actionBarSize"
             android:gravity="center"
-            android:text="@string/recycler_add_text"
+            android:text="@string/recycler_text_add"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"

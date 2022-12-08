@@ -4,15 +4,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Node Tree"
-        android:textSize="@dimen/sp_30"
+    <include
+        android:id="@+id/node_tree_toolbar"
+        layout="@layout/app_bar" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/node_tree_rv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/node_tree_toolbar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

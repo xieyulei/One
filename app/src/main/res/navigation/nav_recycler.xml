@@ -26,6 +26,12 @@
         <action
             android:id="@+id/home_to_slideDelete"
             app:destination="@id/slideDeleteRvFragment" />
+        <action
+            android:id="@+id/home_to_group"
+            app:destination="@id/groupRvFragment" />
+        <action
+            android:id="@+id/home_to_native"
+            app:destination="@id/nativeRvFragment" />
     </fragment>
     <fragment
         android:id="@+id/footerHeaderRvFragment"
@@ -73,6 +79,22 @@
         android:label="TreeNodeRvFragment">
         <action
             android:id="@+id/action_treeNodeRvFragment_to_homeRvFragment"
+            app:destination="@id/homeRvFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/groupRvFragment"
+        android:name="com.xyl.one.widgets.recycler.fragment.GroupRvFragment"
+        android:label="GroupRvFragment">
+        <action
+            android:id="@+id/action_groupRvFragment_to_homeRvFragment"
+            app:destination="@id/homeRvFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nativeRvFragment"
+        android:name="com.xyl.one.widgets.recycler.fragment.NativeRvFragment"
+        android:label="NativeRvFragment" >
+        <action
+            android:id="@+id/action_nativeRvFragment_to_homeRvFragment"
             app:destination="@id/homeRvFragment" />
     </fragment>
 </navigation>

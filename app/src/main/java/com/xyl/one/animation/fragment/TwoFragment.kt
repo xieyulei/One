@@ -17,7 +17,7 @@ import com.xyl.one.databinding.FragmentTwoAnimBinding
 class TwoFragment : Fragment() {
     private lateinit var mBinding: FragmentTwoAnimBinding
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         mBinding = FragmentTwoAnimBinding.inflate(inflater, container, false)
         return mBinding.root
     }

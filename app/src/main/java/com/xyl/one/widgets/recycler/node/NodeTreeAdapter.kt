@@ -1,11 +1,8 @@
 package com.xyl.one.widgets.recycler.node
 
 import com.chad.library.adapter.base.BaseNodeAdapter
+import com.chad.library.adapter.base.entity.node.BaseExpandNode
 import com.chad.library.adapter.base.entity.node.BaseNode
-import com.xyl.one.widgets.recycler.FirstNode
-import com.xyl.one.widgets.recycler.ItemType
-import com.xyl.one.widgets.recycler.SecondNode
-import com.xyl.one.widgets.recycler.ThirdNode
 
 /**
  * Copyright (c) 2022 Raysharp.cn. All rights reserved.
@@ -18,6 +15,12 @@ class NodeTreeAdapter(mList: MutableList<BaseNode>? = null) : BaseNodeAdapter(mL
 
     companion object {
         const val EXPAND_COLLAPSE_PAYLOAD = 110
+    }
+
+    enum class ItemType(val itemType: Int) {
+        ITEM_FIRST(1),
+        ITEM_SECOND(2),
+        ITEM_THIRD(3)
     }
 
     init {
@@ -33,4 +36,20 @@ class NodeTreeAdapter(mList: MutableList<BaseNode>? = null) : BaseNodeAdapter(mL
             is ThirdNode -> ItemType.ITEM_THIRD.itemType
             else -> -1
         }
+
+    class FirstNode(val title: String, val imageId: Int, override val childNode: MutableList<BaseNode>?) :
+        BaseExpandNode() {
+        init {
+            isExpanded = false
+        }
+    }
+
+    class SecondNode(val title: String, val imageId: Int, override val childNode: MutableList<BaseNode>?) :
+        BaseExpandNode() {
+        init {
+            isExpanded = false
+        }
+    }
+
+    class ThirdNode(val title: String, val imageId: Int, override val childNode: MutableList<BaseNode>? = null) : BaseNode()
 }

@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dp_20"
-        android:text="@string/recycler_node_third_title"
+        android:text="@string/recycler_node_text_third"
         app:layout_constraintBottom_toBottomOf="@id/iv_node_third"
         app:layout_constraintStart_toEndOf="@id/iv_node_third"
         app:layout_constraintTop_toTopOf="@id/iv_node_third"

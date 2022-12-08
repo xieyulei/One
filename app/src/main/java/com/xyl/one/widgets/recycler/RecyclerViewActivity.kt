@@ -1,11 +1,8 @@
 package com.xyl.one.widgets.recycler
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.xyl.one.databinding.ActivityRecyclerviewBinding
-import com.xyl.one.widgets.recycler.node.NodeGridListActivity
-import com.xyl.one.widgets.recycler.node.NodeTreeListActivity
 
 /**
  * Copyright (c) 2022 Raysharp.cn. All rights reserved.

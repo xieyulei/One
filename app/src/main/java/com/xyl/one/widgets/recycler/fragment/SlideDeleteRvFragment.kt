@@ -2,7 +2,7 @@ package com.xyl.one.widgets.recycler.fragment
 
 import android.view.LayoutInflater
 import com.xyl.one.base.BaseRecyclerFragment
-import com.xyl.one.databinding.RecylerFragmentSlideDeleteBinding
+import com.xyl.one.databinding.RecyclerFragmentSlideDeleteBinding
 
 /**
  * Copyright (c) 2022 Raysharp.cn. All rights reserved.
@@ -11,9 +11,9 @@ import com.xyl.one.databinding.RecylerFragmentSlideDeleteBinding
  * @author xieyulei
  * @date 2022-12-07
  */
-class SlideDeleteRvFragment : BaseRecyclerFragment<RecylerFragmentSlideDeleteBinding>() {
-    override fun inflateViewBinding(inflater: LayoutInflater): RecylerFragmentSlideDeleteBinding {
-        return RecylerFragmentSlideDeleteBinding.inflate(inflater)
+class SlideDeleteRvFragment : BaseRecyclerFragment<RecyclerFragmentSlideDeleteBinding>() {
+    override fun inflateViewBinding(inflater: LayoutInflater): RecyclerFragmentSlideDeleteBinding {
+        return RecyclerFragmentSlideDeleteBinding.inflate(inflater)
     }
 
     override fun initView() {
