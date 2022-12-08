@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp_10"
             android:gravity="center"
-            android:text="@string/rv_data_empty_text"
+            android:text="@string/recycler_text_data_empty"
             android:textSize="@dimen/sp_18"
             app:layout_constraintEnd_toEndOf="@id/empty_iv"
             app:layout_constraintStart_toStartOf="@id/empty_iv"
