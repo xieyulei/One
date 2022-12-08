@@ -19,7 +19,7 @@ import com.xyl.one.databinding.RecyclerFragmentHomeBinding
  * @author xieyulei
  * @date 2022-12-07
  */
-class HomeRvFragment : BaseRecyclerFragment<RecyclerFragmentHomeBinding>() {
+class RvHomeFragment : BaseRecyclerFragment<RecyclerFragmentHomeBinding>() {
 
     private lateinit var mAdapter: HomeRvAdapter
 

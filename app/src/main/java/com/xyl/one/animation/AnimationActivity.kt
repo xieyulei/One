@@ -21,28 +21,28 @@ class AnimationActivity : AppCompatActivity() {
         mBinding = ActivityAnimationBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
 
-        mBinding.btnTweenAnim.setOnClickListener {
-            startActivity(Intent(this@AnimationActivity, TweenAnimActivity::class.java))
-        }
-
-        mBinding.btnActivityAnim.setOnClickListener {
-            startActivity(Intent(this@AnimationActivity, TransActAnimActivity::class.java))
-        }
-
-        mBinding.btnFragmentAnim.setOnClickListener {
-            startActivity(Intent(this@AnimationActivity, TransFragAnimActivity::class.java))
-        }
-
-        mBinding.btnListAnim.setOnClickListener {
-            startActivity(Intent(this@AnimationActivity, ListAnimActivity::class.java))
-        }
-
-        mBinding.btnFrameAnim.setOnClickListener {
-            startActivity(Intent(this@AnimationActivity, FrameAnimActivity::class.java))
-        }
-
-        mBinding.btnPropertyAnim.setOnClickListener {
-            startActivity(Intent(this@AnimationActivity, PropertyAnimActivity::class.java))
-        }
+//        mBinding.btnTweenAnim.setOnClickListener {
+//            startActivity(Intent(this@AnimationActivity, TweenAnimActivity::class.java))
+//        }
+//
+//        mBinding.btnActivityAnim.setOnClickListener {
+//            startActivity(Intent(this@AnimationActivity, TransActAnimActivity::class.java))
+//        }
+//
+//        mBinding.btnFragmentAnim.setOnClickListener {
+//            startActivity(Intent(this@AnimationActivity, TransFragAnimActivity::class.java))
+//        }
+//
+//        mBinding.btnListAnim.setOnClickListener {
+//            startActivity(Intent(this@AnimationActivity, ListAnimActivity::class.java))
+//        }
+//
+//        mBinding.btnFrameAnim.setOnClickListener {
+//            startActivity(Intent(this@AnimationActivity, FrameAnimActivity::class.java))
+//        }
+//
+//        mBinding.btnPropertyAnim.setOnClickListener {
+//            startActivity(Intent(this@AnimationActivity, PropertyAnimActivity::class.java))
+//        }
     }
 }

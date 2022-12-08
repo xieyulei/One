@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_animation"
+    app:startDestination="@id/animationHomeFragment">
+
+    <fragment
+        android:id="@+id/animationHomeFragment"
+        android:name="com.xyl.one.animation.AnimationHomeFragment"
+        android:label="AnimationHomeFragment">
+        <action
+            android:id="@+id/home_to_tween"
+            app:destination="@id/tweenAnimFragment" />
+        <action
+            android:id="@+id/home_to_property"
+            app:destination="@id/propertyAnimFragment" />
+        <action
+            android:id="@+id/home_to_frame"
+            app:destination="@id/frameAnimFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tweenAnimFragment"
+        android:name="com.xyl.one.animation.fragment.TweenAnimFragment"
+        android:label="TweenAnimFragment">
+        <action
+            android:id="@+id/tween_to_home"
+            app:destination="@id/animationHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/propertyAnimFragment"
+        android:name="com.xyl.one.animation.fragment.PropertyAnimFragment"
+        android:label="PropertyAnimFragment">
+        <action
+            android:id="@+id/property_to_home"
+            app:destination="@id/animationHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/frameAnimFragment"
+        android:name="com.xyl.one.animation.fragment.FrameAnimFragment"
+        android:label="FrameAnimFragment">
+        <action
+            android:id="@+id/frame_to_home"
+            app:destination="@id/animationHomeFragment" />
+    </fragment>
+</navigation>

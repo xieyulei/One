@@ -28,6 +28,15 @@
     <string name="recycler_text_header">Header</string>
 
     <!--  Animation  -->
+    <string name="animation_frame">Frame Animation</string>
+    <string name="animation_property">Property Animation</string>
+    <string name="animation_tween">Tween Animation</string>
+    <string name="animation_frame_start">Start</string>
+    <string name="animation_frame_stop">Stop</string>
+    <string name="animation_text_xml">XML</string>
+    <string name="animation_text_code">Code</string>
+
+
     <string name="btn_android_animation">Android Animation</string>
     <string name="btn_android_recyclerview">Android RecyclerView</string>
     <string name="btn_activity_animation">Activity Animation Change</string>

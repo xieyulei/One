@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/homeRvFragment"
-        android:name="com.xyl.one.widgets.recycler.fragment.HomeRvFragment"
+        android:name="com.xyl.one.widgets.recycler.fragment.RvHomeFragment"
         android:label="HomeRvFragment">
         <action
             android:id="@+id/home_to_footerHeader"

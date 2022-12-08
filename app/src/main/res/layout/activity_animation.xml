@@ -4,88 +4,112 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideLine1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.05" />
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/anim_home_container"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/nav_animation" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/gl_hor_0.05"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.05" />
+    <!--    <androidx.fragment.app.FragmentContainerView-->
+    <!--        android:id="@+id/recycler_container"-->
+    <!--        android:name="androidx.navigation.fragment.NavHostFragment"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        app:defaultNavHost="true"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:navGraph="@navigation/nav_recycler" />-->
 
-    <Button
-        android:id="@+id/btn_tween_anim"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="start"
-        android:singleLine="true"
-        android:text="@string/tween_animation"
-        android:textAllCaps="false"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@id/guideLine1"
-        app:layout_constraintTop_toTopOf="@id/gl_hor_0.05" />
+    <!--    <androidx.constraintlayout.widget.Guideline-->
+    <!--        android:id="@+id/guideLine1"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="vertical"-->
+    <!--        app:layout_constraintGuide_percent="0.05" />-->
 
-    <Button
-        android:id="@+id/btn_activity_anim"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="start"
-        android:singleLine="true"
-        android:text="@string/btn_activity_animation"
-        android:textAllCaps="false"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@id/guideLine1"
-        app:layout_constraintTop_toBottomOf="@id/btn_tween_anim" />
+    <!--    <androidx.constraintlayout.widget.Guideline-->
+    <!--        android:id="@+id/gl_hor_0.05"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        app:layout_constraintGuide_percent="0.05" />-->
 
-    <Button
-        android:id="@+id/btn_fragment_anim"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="start"
-        android:singleLine="true"
-        android:text="@string/btn_fragment_animation"
-        android:textAllCaps="false"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@id/guideLine1"
-        app:layout_constraintTop_toBottomOf="@id/btn_activity_anim" />
+    <!--    <Button-->
+    <!--        android:id="@+id/btn_tween_anim"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:gravity="start"-->
+    <!--        android:singleLine="true"-->
+    <!--        android:text="@string/tween_animation"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        android:textSize="18sp"-->
+    <!--        app:layout_constraintStart_toStartOf="@id/guideLine1"-->
+    <!--        app:layout_constraintTop_toTopOf="@id/gl_hor_0.05" />-->
 
-    <Button
-        android:id="@+id/btn_list_anim"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="start"
-        android:singleLine="true"
-        android:text="@string/title_list_fragment"
-        android:textAllCaps="false"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@id/guideLine1"
-        app:layout_constraintTop_toBottomOf="@id/btn_fragment_anim" />
+    <!--    <Button-->
+    <!--        android:id="@+id/btn_activity_anim"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:gravity="start"-->
+    <!--        android:singleLine="true"-->
+    <!--        android:text="@string/btn_activity_animation"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        android:textSize="18sp"-->
+    <!--        app:layout_constraintStart_toStartOf="@id/guideLine1"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/btn_tween_anim" />-->
 
-    <Button
-        android:id="@+id/btn_frame_anim"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/title_frame_activity"
-        android:textAllCaps="false"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@id/guideLine1"
-        app:layout_constraintTop_toBottomOf="@id/btn_list_anim" />
+    <!--    <Button-->
+    <!--        android:id="@+id/btn_fragment_anim"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:gravity="start"-->
+    <!--        android:singleLine="true"-->
+    <!--        android:text="@string/btn_fragment_animation"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        android:textSize="18sp"-->
+    <!--        app:layout_constraintStart_toStartOf="@id/guideLine1"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/btn_activity_anim" />-->
 
-    <Button
-        android:id="@+id/btn_property_anim"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="start"
-        android:singleLine="true"
-        android:text="@string/title_property_activity"
-        android:textAllCaps="false"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@id/guideLine1"
-        app:layout_constraintTop_toBottomOf="@id/btn_frame_anim" />
+    <!--    <Button-->
+    <!--        android:id="@+id/btn_list_anim"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:gravity="start"-->
+    <!--        android:singleLine="true"-->
+    <!--        android:text="@string/title_list_fragment"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        android:textSize="18sp"-->
+    <!--        app:layout_constraintStart_toStartOf="@id/guideLine1"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/btn_fragment_anim" />-->
+
+    <!--    <Button-->
+    <!--        android:id="@+id/btn_frame_anim"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="@string/title_frame_activity"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        android:textSize="18sp"-->
+    <!--        app:layout_constraintStart_toStartOf="@id/guideLine1"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/btn_list_anim" />-->
+
+    <!--    <Button-->
+    <!--        android:id="@+id/btn_property_anim"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:gravity="start"-->
+    <!--        android:singleLine="true"-->
+    <!--        android:text="@string/title_property_activity"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        android:textSize="18sp"-->
+    <!--        app:layout_constraintStart_toStartOf="@id/guideLine1"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/btn_frame_anim" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
