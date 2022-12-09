@@ -28,16 +28,19 @@
     <string name="recycler_text_header">Header</string>
 
     <!--  Animation  -->
-    <string name="animation_frame">Frame Animation</string>
-    <string name="animation_property">Property Animation</string>
-    <string name="animation_tween">Tween Animation</string>
-    <string name="animation_frame_start">Start</string>
-    <string name="animation_frame_stop">Stop</string>
-    <string name="animation_text_xml">XML</string>
-    <string name="animation_text_code">Code</string>
+    <string name="anim_frame">Frame Animation</string>
+    <string name="anim_property">Property Animation</string>
+    <string name="anim_tween">Tween Animation</string>
+    <string name="anim_frame_start">Start</string>
+    <string name="anim_frame_stop">Stop</string>
+    <string name="anim_tween_translate">Translate</string>
+    <string name="anim_tween_rotate">Rotate</string>
+    <string name="anim_tween_scale">Scale</string>
+    <string name="anim_tween_alpha">Alpha</string>
+    <string name="anim_text_xml">XML</string>
+    <string name="anim_text_code">Code</string>
 
 
-    <string name="btn_android_animation">Android Animation</string>
     <string name="btn_android_recyclerview">Android RecyclerView</string>
     <string name="btn_activity_animation">Activity Animation Change</string>
     <string name="btn_fragment_animation">Fragment Animation Change</string>
@@ -49,22 +52,7 @@
     <string name="title_one_fragment">One Fragment</string>
     <string name="title_two_fragment">Two Fragment</string>
     <string name="title_list_fragment">List Fragment</string>
-    <string name="title_frame_activity">Frame Animation</string>
+    <!--    <string name="title_frame_activity">Frame Animation</string>-->
     <string name="title_property_activity">Property Animation</string>
-
-    <string name="tween_anim_alpha_code">Alpha Code</string>
-    <string name="tween_anim_alpha_xml">Alpha xml</string>
-    <string name="tween_anim_rotate_code">Rotate code</string>
-    <string name="tween_anim_rotate_xml">Rotate xml</string>
-    <string name="tween_anim_scale_code">Scale code</string>
-    <string name="tween_anim_scale_xml">Scale xml</string>
-    <string name="tween_anim_translate_code">Translate code</string>
-    <string name="tween_anim_translate_xml">Translate xml</string>
-
-    <string name="frame_anim_start_xml">Start Xml</string>
-    <string name="frame_anim_stop_xml">Stop Xml</string>
-    <string name="frame_anim_start_code">Start Code</string>
-    <string name="frame_anim_stop_code">Stop Code</string>
-    <string name="tween_animation">Tween Animation</string>
 
 </resources>

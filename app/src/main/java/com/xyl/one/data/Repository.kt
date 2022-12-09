@@ -139,7 +139,7 @@ fun getNodeTreeListData(): MutableList<BaseNode> {
 /*********************************** Animation ************************************/
 
 fun getAnimDataList(): MutableList<RvItemBean> = arrayListOf(
-    item(R.string.animation_tween, R.drawable.ic_jetpack),
-    item(R.string.animation_property, R.drawable.ic_jetpack),
-    item(R.string.animation_frame, R.drawable.ic_jetpack)
+    item(R.string.anim_tween, R.drawable.ic_jetpack),
+    item(R.string.anim_property, R.drawable.ic_jetpack),
+    item(R.string.anim_frame, R.drawable.ic_jetpack)
 )

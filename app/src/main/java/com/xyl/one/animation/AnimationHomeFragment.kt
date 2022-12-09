@@ -38,9 +38,9 @@ class AnimationHomeFragment : BaseRecyclerFragment<AnimFragmentHomeBinding>() {
         mAdapter.setOnItemClickListener { adapter, _, position ->
             val itemBean = adapter.data[position] as RvItemBean
             when (itemBean.title) {
-                getString(R.string.animation_tween) -> go(R.id.home_to_tween)
-                getString(R.string.animation_property) -> go(R.id.home_to_property)
-                getString(R.string.animation_frame) -> go(R.id.home_to_frame)
+                getString(R.string.anim_tween) -> go(R.id.home_to_tween)
+                getString(R.string.anim_property) -> go(R.id.home_to_property)
+                getString(R.string.anim_frame) -> go(R.id.home_to_frame)
             }
         }
     }

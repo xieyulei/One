@@ -19,7 +19,7 @@ class PropertyAnimFragment : BaseRecyclerFragment<AnimFragmentPropertyBinding>()
 
     override fun initView() {
         mBinding.animPropertyToolbar.apply {
-            toolbarTitle.text = getString(R.string.animation_property)
+            toolbarTitle.text = getString(R.string.anim_property)
             toolbarBackFl.setOnClickListener { goBack() }
         }
     }
