@@ -11,8 +11,8 @@ import com.chad.library.adapter.base.module.DraggableModule
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
 import com.xyl.one.R
 import com.xyl.one.base.BaseRecyclerFragment
-import com.xyl.one.data.RvItemBean
-import com.xyl.one.data.getDragItemListData
+import com.xyl.one.data.DataServer
+import com.xyl.one.data.DataServer.RvItemBean
 import com.xyl.one.databinding.RecyclerFragmentDragItemBinding
 import com.xyl.one.utils.showToast
 
@@ -55,7 +55,7 @@ class DragItemRvFragment : BaseRecyclerFragment<RecyclerFragmentDragItemBinding>
             }
         }
 
-        val mAdapter = DragItemAdapter(R.layout.recycler_rv_item, getDragItemListData())
+        val mAdapter = DragItemAdapter(R.layout.recycler_rv_item, DataServer.getDragItemListData())
 
         // Setting Drag config
         mAdapter.draggableModule.isDragEnabled = true

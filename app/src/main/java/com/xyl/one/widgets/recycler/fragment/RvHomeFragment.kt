@@ -8,8 +8,8 @@ import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
 import com.xyl.one.R
 import com.xyl.one.base.BaseRecyclerFragment
-import com.xyl.one.data.RvItemBean
-import com.xyl.one.data.getRecyclerHomeList
+import com.xyl.one.data.DataServer
+import com.xyl.one.data.DataServer.RvItemBean
 import com.xyl.one.databinding.RecyclerFragmentHomeBinding
 
 /**
@@ -37,7 +37,7 @@ class RvHomeFragment : BaseRecyclerFragment<RecyclerFragmentHomeBinding>() {
     }
 
     override fun initView() {
-        mAdapter = HomeRvAdapter(R.layout.recycler_rv_item, getRecyclerHomeList())
+        mAdapter = HomeRvAdapter(R.layout.recycler_rv_item, DataServer.getRecyclerHomeList())
         mBinding.recyclerHomeRv.apply {
             layoutManager = LinearLayoutManager(requireContext())
             addItemDecoration(DividerItemDecoration(requireContext(), DividerItemDecoration.VERTICAL))

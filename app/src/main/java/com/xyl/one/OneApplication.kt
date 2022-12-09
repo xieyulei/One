@@ -13,8 +13,8 @@ import android.content.Context
  */
 class OneApplication : Application() {
 
-    @SuppressLint("StaticFieldLeak")
     companion object {
+        @SuppressLint("StaticFieldLeak")
         lateinit var context: Context
     }
 

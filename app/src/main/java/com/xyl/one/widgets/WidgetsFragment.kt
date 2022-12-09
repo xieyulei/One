@@ -7,8 +7,8 @@ import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
 import com.xyl.one.R
 import com.xyl.one.base.BaseRecyclerFragment
-import com.xyl.one.data.RvItemBean
-import com.xyl.one.data.getWidgetsList
+import com.xyl.one.data.DataServer
+import com.xyl.one.data.DataServer.RvItemBean
 import com.xyl.one.databinding.WidgetsFragmentHomeBinding
 import com.xyl.one.databinding.WidgetsRvItemBinding
 import com.xyl.one.utils.getString
@@ -38,7 +38,7 @@ class WidgetsFragment : BaseRecyclerFragment<WidgetsFragmentHomeBinding>() {
     }
 
     override fun initView() {
-        val mAdapter = WidgetsAdapter(R.layout.widgets_rv_item, getWidgetsList())
+        val mAdapter = WidgetsAdapter(R.layout.widgets_rv_item, DataServer.getWidgetsList())
         mBinding.widgetsRv.apply {
             layoutManager = LinearLayoutManager(requireContext())
             adapter = mAdapter

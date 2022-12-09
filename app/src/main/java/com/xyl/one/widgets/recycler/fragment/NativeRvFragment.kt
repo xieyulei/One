@@ -10,8 +10,8 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.xyl.one.R
 import com.xyl.one.base.BaseRecyclerFragment
-import com.xyl.one.data.RvItemBean
-import com.xyl.one.data.getRecyclerNormalList
+import com.xyl.one.data.DataServer
+import com.xyl.one.data.DataServer.RvItemBean
 import com.xyl.one.databinding.RecyclerFragmentNativeBinding
 import com.xyl.one.utils.showToast
 
@@ -40,7 +40,7 @@ class NativeRvFragment : BaseRecyclerFragment<RecyclerFragmentNativeBinding>() {
     }
 
     override fun initView() {
-        mAdapter = NativeRvAdapter(requireContext(), getRecyclerNormalList())
+        mAdapter = NativeRvAdapter(requireContext(), DataServer.getRecyclerNormalList())
         mBinding.nativeRv.apply {
             layoutManager = GridLayoutManager(requireContext(), 2)
             adapter = mAdapter

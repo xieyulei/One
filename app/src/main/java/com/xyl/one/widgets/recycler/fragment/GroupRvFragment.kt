@@ -9,8 +9,8 @@ import com.chad.library.adapter.base.BaseSectionQuickAdapter
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
 import com.xyl.one.R
 import com.xyl.one.base.BaseRecyclerFragment
-import com.xyl.one.data.GroupFruit
-import com.xyl.one.data.getGroupListData
+import com.xyl.one.data.DataServer
+import com.xyl.one.data.DataServer.RvGroupItemBean
 import com.xyl.one.databinding.RecyclerFragmentGroupBinding
 
 /**
@@ -38,7 +38,7 @@ class GroupRvFragment : BaseRecyclerFragment<RecyclerFragmentGroupBinding>() {
     }
 
     override fun initView() {
-        mAdapter = GroupRvAdapter(R.layout.rv_item_header, R.layout.recycler_rv_item, getGroupListData())
+        mAdapter = GroupRvAdapter(R.layout.rv_item_header, R.layout.recycler_rv_item, DataServer.getGroupListData())
 
         mBinding.groupRv.apply {
             layoutManager = LinearLayoutManager(requireContext())
@@ -60,14 +60,14 @@ class GroupRvFragment : BaseRecyclerFragment<RecyclerFragmentGroupBinding>() {
         }
     }
 
-    class GroupRvAdapter(@LayoutRes headLayoutRes: Int, @LayoutRes itemLayoutRes: Int, data: MutableList<GroupFruit>) :
-        BaseSectionQuickAdapter<GroupFruit, BaseViewHolder>(headLayoutRes, itemLayoutRes, data) {
-        override fun convert(holder: BaseViewHolder, item: GroupFruit) {
+    class GroupRvAdapter(@LayoutRes headLayoutRes: Int, @LayoutRes itemLayoutRes: Int, data: MutableList<RvGroupItemBean>) :
+        BaseSectionQuickAdapter<RvGroupItemBean, BaseViewHolder>(headLayoutRes, itemLayoutRes, data) {
+        override fun convert(holder: BaseViewHolder, item: RvGroupItemBean) {
             holder.setText(R.id.recycler_rv_item_title, item.name)
                 .setImageResource(R.id.recycler_rv_item_iv, item.imageId)
         }
 
-        override fun convertHeader(helper: BaseViewHolder, item: GroupFruit) {
+        override fun convertHeader(helper: BaseViewHolder, item: RvGroupItemBean) {
             helper.setText(R.id.rv_item_header_title, item.header)
         }
     }

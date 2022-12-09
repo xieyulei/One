@@ -12,8 +12,8 @@ import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
 import com.xyl.one.R
 import com.xyl.one.base.BaseRecyclerFragment
-import com.xyl.one.data.RvItemBean
-import com.xyl.one.data.getFooterHeaderList
+import com.xyl.one.data.DataServer
+import com.xyl.one.data.DataServer.RvItemBean
 import com.xyl.one.databinding.RecyclerFragmentFooterHeaderBinding
 import com.xyl.one.databinding.RvItemFooterBinding
 import com.xyl.one.databinding.RvItemHeaderPlusBinding
@@ -47,7 +47,7 @@ class FooterHeaderRvFragment : BaseRecyclerFragment<RecyclerFragmentFooterHeader
     }
 
     override fun initView() {
-        mFooterHeaderAdapter = FooterHeaderAdapter(R.layout.recycler_rv_item, getFooterHeaderList())
+        mFooterHeaderAdapter = FooterHeaderAdapter(R.layout.recycler_rv_item, DataServer.getFooterHeaderList())
         mBinding.footerHeaderRv.apply {
             layoutManager = LinearLayoutManager(requireContext())
 

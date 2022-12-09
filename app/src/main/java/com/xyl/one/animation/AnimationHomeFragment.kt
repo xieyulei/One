@@ -5,8 +5,8 @@ import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
 import com.xyl.one.R
 import com.xyl.one.base.BaseRecyclerFragment
-import com.xyl.one.data.RvItemBean
-import com.xyl.one.data.getAnimHomeDataList
+import com.xyl.one.data.DataServer
+import com.xyl.one.data.DataServer.RvItemBean
 import com.xyl.one.databinding.AnimFragmentHomeBinding
 import com.xyl.one.utils.startActivity
 
@@ -36,7 +36,7 @@ class AnimationHomeFragment : BaseRecyclerFragment<AnimFragmentHomeBinding>() {
     }
 
     override fun initView() {
-        mAdapter = AnimHomeAdapter(R.layout.anim_home_rv_item, getAnimHomeDataList())
+        mAdapter = AnimHomeAdapter(R.layout.anim_home_rv_item, DataServer.getAnimHomeDataList())
         mBinding.animHomeRv.adapter = mAdapter
         mAdapter.setOnItemClickListener { adapter, _, position ->
             val itemBean = adapter.data[position] as RvItemBean

@@ -6,8 +6,8 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
 import com.xyl.one.animation.AnimationActivity
-import com.xyl.one.data.RvItemBean
-import com.xyl.one.data.getMainList
+import com.xyl.one.data.DataServer
+import com.xyl.one.data.DataServer.RvItemBean
 import com.xyl.one.databinding.MainActivityHomeBinding
 import com.xyl.one.databinding.MainRvHeaderBinding
 import com.xyl.one.jetpack.JetpackActivity
@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initView() {
-        mAdapter = MainRvAdapter(R.layout.main_rv_item, getMainList())
+        mAdapter = MainRvAdapter(R.layout.main_rv_item, DataServer.getMainList())
         mBinding.mainRv.apply {
             layoutManager = GridLayoutManager(this@MainActivity, 2)
             adapter = mAdapter

@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.xyl.one.R
 import com.xyl.one.base.BaseRecyclerFragment
-import com.xyl.one.data.getNodeTreeListData
+import com.xyl.one.data.DataServer
 import com.xyl.one.databinding.RecyclerFragmentNodeTreeBinding
 import com.xyl.one.databinding.RvEmptyBinding
 import com.xyl.one.widgets.recycler.node.NodeTreeAdapter
@@ -41,7 +41,7 @@ class NodeTreeRvFragment : BaseRecyclerFragment<RecyclerFragmentNodeTreeBinding>
             layoutManager = LinearLayoutManager(requireContext())
             adapter = mAdapter
             postDelayed({
-                mAdapter.setList(getNodeTreeListData())
+                mAdapter.setList(DataServer.getNodeTreeListData())
             }, 3000)
         }
     }

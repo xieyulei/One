@@ -6,8 +6,8 @@ import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
 import com.xyl.one.R
 import com.xyl.one.base.BaseRecyclerFragment
-import com.xyl.one.data.RvItemBean
-import com.xyl.one.data.getAnimDefaultDataList
+import com.xyl.one.data.DataServer
+import com.xyl.one.data.DataServer.RvItemBean
 import com.xyl.one.databinding.AnimFragmentRvItemBinding
 
 /**
@@ -30,7 +30,7 @@ class RvItemAnimFragment : BaseRecyclerFragment<AnimFragmentRvItemBinding>() {
     }
 
     override fun initView() {
-        val adapter = RecyclerAdapter(R.layout.rv_item, getAnimDefaultDataList())
+        val adapter = RecyclerAdapter(R.layout.rv_item, DataServer.getAnimDefaultDataList())
         mBinding.listRv.layoutManager = LinearLayoutManager(requireContext())
 
         // 为RecyclerView的item添加动画（此处为代码方式添加），另一种方式是在xml中，为recyclerView添加android:layoutAnimation属性
