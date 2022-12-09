@@ -44,7 +44,7 @@ class ColorCircleView @JvmOverloads constructor(
      */
     override fun onDraw(canvas: Canvas?) {
         super.onDraw(canvas)
-        canvas?.drawCircle(500f, 500f, RADIUS, mPaint)
+        canvas?.drawCircle(600f, 100f, RADIUS, mPaint)
     }
 
 }

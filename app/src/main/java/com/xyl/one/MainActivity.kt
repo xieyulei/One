@@ -8,7 +8,7 @@ import com.chad.library.adapter.base.viewholder.BaseViewHolder
 import com.xyl.one.animation.AnimationActivity
 import com.xyl.one.data.RvItemBean
 import com.xyl.one.data.getMainList
-import com.xyl.one.databinding.ActivityMainBinding
+import com.xyl.one.databinding.MainActivityHomeBinding
 import com.xyl.one.databinding.MainRvHeaderBinding
 import com.xyl.one.jetpack.JetpackActivity
 import com.xyl.one.utils.startActivity
@@ -23,12 +23,12 @@ import com.xyl.one.widgets.WidgetsActivity
  */
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var mBinding: ActivityMainBinding
+    private lateinit var mBinding: MainActivityHomeBinding
     private lateinit var mAdapter: MainRvAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        mBinding = ActivityMainBinding.inflate(layoutInflater)
+        mBinding = MainActivityHomeBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
         initView()
     }

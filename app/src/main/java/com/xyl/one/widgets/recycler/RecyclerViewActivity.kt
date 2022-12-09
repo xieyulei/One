@@ -2,7 +2,7 @@ package com.xyl.one.widgets.recycler
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.xyl.one.databinding.ActivityRecyclerviewBinding
+import com.xyl.one.databinding.RecyclerActivityHomeBinding
 
 /**
  * Copyright (c) 2022 Raysharp.cn. All rights reserved.
@@ -13,30 +13,11 @@ import com.xyl.one.databinding.ActivityRecyclerviewBinding
  */
 class RecyclerViewActivity : AppCompatActivity() {
 
-    private lateinit var mBinding: ActivityRecyclerviewBinding
+    private lateinit var mBinding: RecyclerActivityHomeBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        mBinding = ActivityRecyclerviewBinding.inflate(layoutInflater)
+        mBinding = RecyclerActivityHomeBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
-//        initListener()
     }
-
-
-//    private fun initListener() {
-//        mBinding.apply {
-//            btnNormal.setOnClickListener {
-//                startActivity(Intent(this@RecyclerViewActivity, NormalRvListActivity::class.java))
-//            }
-//            btnGroup.setOnClickListener {
-//                startActivity(Intent(this@RecyclerViewActivity, GroupRvListActivity::class.java))
-//            }
-//            btnNodeTree.setOnClickListener {
-//                startActivity(Intent(this@RecyclerViewActivity, NodeTreeListActivity::class.java))
-//            }
-//            btnNodeGrid.setOnClickListener {
-//                startActivity(Intent(this@RecyclerViewActivity, NodeGridListActivity::class.java))
-//            }
-//        }
-//    }
 }

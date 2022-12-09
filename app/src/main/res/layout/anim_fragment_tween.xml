@@ -7,7 +7,7 @@
 
     <include
         android:id="@+id/anim_tween_toolbar"
-        layout="@layout/app_bar" />
+        layout="@layout/toolbar" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/anim_tween_xml_cv"

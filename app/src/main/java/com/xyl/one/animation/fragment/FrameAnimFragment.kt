@@ -23,11 +23,14 @@ class FrameAnimFragment : BaseRecyclerFragment<AnimFragmentFrameBinding>() {
         return AnimFragmentFrameBinding.inflate(inflater)
     }
 
-    override fun initView() {
+    override fun setupToolbar() {
         mBinding.animFrameToolbar.apply {
             toolbarTitle.text = getString(R.string.anim_frame)
             toolbarBackFl.setOnClickListener { goBack() }
         }
+    }
+
+    override fun initView() {
         showFrameAnimByXml()
         showFrameAnimByCode()
     }

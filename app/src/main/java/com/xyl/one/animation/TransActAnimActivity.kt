@@ -3,7 +3,7 @@ package com.xyl.one.animation
 import android.os.Bundle
 import androidx.appcompat.R
 import androidx.appcompat.app.AppCompatActivity
-import com.xyl.one.databinding.ActivityTransActAnimBinding
+import com.xyl.one.databinding.AnimActivityTransActBinding
 
 /**
  * Copyright (c) 2022 Raysharp.cn. All rights reserved.
@@ -31,13 +31,20 @@ import com.xyl.one.databinding.ActivityTransActAnimBinding
  */
 class TransActAnimActivity : AppCompatActivity() {
 
-    private lateinit var mBinding: ActivityTransActAnimBinding
+    private lateinit var mBinding: AnimActivityTransActBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         overridePendingTransition(R.anim.abc_fade_in, R.anim.abc_fade_out)
-        mBinding = ActivityTransActAnimBinding.inflate(layoutInflater)
+        mBinding = AnimActivityTransActBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
+
+        mBinding.transActToolbar.apply {
+            toolbarTitle.text = getString(com.xyl.one.R.string.anim_act_trans)
+            toolbarBackFl.setOnClickListener {
+                finish()
+            }
+        }
     }
 
     override fun finish() {

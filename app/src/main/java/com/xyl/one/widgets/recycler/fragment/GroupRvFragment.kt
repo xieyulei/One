@@ -28,15 +28,16 @@ class GroupRvFragment : BaseRecyclerFragment<RecyclerFragmentGroupBinding>() {
         return RecyclerFragmentGroupBinding.inflate(inflater)
     }
 
-    override fun initView() {
+    override fun setupToolbar() {
         mBinding.groupToolbar.apply {
             toolbarTitle.text = getString(R.string.recycler_group)
             toolbarBackFl.setOnClickListener {
                 goBack()
             }
         }
+    }
 
-
+    override fun initView() {
         mAdapter = GroupRvAdapter(R.layout.rv_item_header, R.layout.recycler_rv_item, getGroupListData())
 
         mBinding.groupRv.apply {

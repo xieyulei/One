@@ -6,8 +6,9 @@ import com.chad.library.adapter.base.viewholder.BaseViewHolder
 import com.xyl.one.R
 import com.xyl.one.base.BaseRecyclerFragment
 import com.xyl.one.data.RvItemBean
-import com.xyl.one.data.getAnimDataList
+import com.xyl.one.data.getAnimHomeDataList
 import com.xyl.one.databinding.AnimFragmentHomeBinding
+import com.xyl.one.utils.startActivity
 
 /**
  * Copyright (c) 2022 Raysharp.cn. All rights reserved.
@@ -25,15 +26,17 @@ class AnimationHomeFragment : BaseRecyclerFragment<AnimFragmentHomeBinding>() {
         return AnimFragmentHomeBinding.inflate(inflater)
     }
 
-    override fun initView() {
+    override fun setupToolbar() {
         mBinding.animHomeToolbar.apply {
             toolbarTitle.text = getString(R.string.main_animation)
             toolbarBackFl.setOnClickListener {
                 requireActivity().finish()
             }
         }
+    }
 
-        mAdapter = AnimHomeAdapter(R.layout.anim_home_rv_item, getAnimDataList())
+    override fun initView() {
+        mAdapter = AnimHomeAdapter(R.layout.anim_home_rv_item, getAnimHomeDataList())
         mBinding.animHomeRv.adapter = mAdapter
         mAdapter.setOnItemClickListener { adapter, _, position ->
             val itemBean = adapter.data[position] as RvItemBean
@@ -41,6 +44,9 @@ class AnimationHomeFragment : BaseRecyclerFragment<AnimFragmentHomeBinding>() {
                 getString(R.string.anim_tween) -> go(R.id.home_to_tween)
                 getString(R.string.anim_property) -> go(R.id.home_to_property)
                 getString(R.string.anim_frame) -> go(R.id.home_to_frame)
+                getString(R.string.anim_list) -> go(R.id.home_to_rvItem)
+                getString(R.string.anim_act_trans) -> startActivity<TransActAnimActivity>(requireContext())
+                getString(R.string.anim_frag_trans) -> startActivity<TransFragAnimActivity>(requireContext())
             }
         }
     }

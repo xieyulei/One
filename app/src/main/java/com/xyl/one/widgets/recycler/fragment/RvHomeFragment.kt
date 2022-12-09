@@ -27,14 +27,16 @@ class RvHomeFragment : BaseRecyclerFragment<RecyclerFragmentHomeBinding>() {
         return RecyclerFragmentHomeBinding.inflate(inflater)
     }
 
-    override fun initView() {
+    override fun setupToolbar() {
         mBinding.recyclerToolbar.apply {
             toolbarTitle.text = getString(R.string.recycler_home_title)
             toolbarBackFl.setOnClickListener {
                 requireActivity().finish()
             }
         }
+    }
 
+    override fun initView() {
         mAdapter = HomeRvAdapter(R.layout.recycler_rv_item, getRecyclerHomeList())
         mBinding.recyclerHomeRv.apply {
             layoutManager = LinearLayoutManager(requireContext())

@@ -4,31 +4,41 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btn_replace_one"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/title_one_fragment"
-        android:textAllCaps="false"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <include
+        android:id="@+id/trans_frag_toolbar"
+        layout="@layout/toolbar" />
 
     <Button
-        android:id="@+id/btn_replace_two"
+        android:id="@+id/trans_frag_btn_replace_one"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/title_two_fragment"
+        android:layout_margin="@dimen/dp_16"
+        android:background="@drawable/shape_btn_round"
+        android:text="@string/anim_tween_one_fragment"
         android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@id/trans_frag_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/trans_frag_toolbar" />
+
+    <Button
+        android:id="@+id/trans_frag_btn_replace_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_16"
+        android:background="@drawable/shape_btn_round"
+        android:text="@string/anim_tween_two_fragment"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@id/trans_frag_container"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/trans_frag_toolbar" />
 
     <FrameLayout
-        android:id="@+id/frag_container"
+        android:id="@+id/trans_frag_container"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_replace_one" />
+        app:layout_constraintTop_toBottomOf="@id/trans_frag_btn_replace_one" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

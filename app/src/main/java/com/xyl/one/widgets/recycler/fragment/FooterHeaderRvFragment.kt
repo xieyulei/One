@@ -37,14 +37,16 @@ class FooterHeaderRvFragment : BaseRecyclerFragment<RecyclerFragmentFooterHeader
         return RecyclerFragmentFooterHeaderBinding.inflate(inflater)
     }
 
-    override fun initView() {
+    override fun setupToolbar() {
         mBinding.footerHeaderToolbar.apply {
             toolbarTitle.text = getString(R.string.recycler_footer_header)
             toolbarBackFl.setOnClickListener {
                 goBack()
             }
         }
+    }
 
+    override fun initView() {
         mFooterHeaderAdapter = FooterHeaderAdapter(R.layout.recycler_rv_item, getFooterHeaderList())
         mBinding.footerHeaderRv.apply {
             layoutManager = LinearLayoutManager(requireContext())

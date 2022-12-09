@@ -1,7 +1,7 @@
 package com.xyl.one.animation.evaluator
 
 import android.animation.TypeEvaluator
-import com.xyl.one.animation.PropertyAnimActivity.Point
+import com.xyl.one.animation.fragment.PropertyAnimFragment.Point
 
 /**
  * Copyright (c) 2022 Raysharp.cn. All rights reserved.

@@ -16,6 +16,9 @@ class MoreStyleRvFragment : BaseRecyclerFragment<RecyclerFragmentMoreStyleBindin
         return RecyclerFragmentMoreStyleBinding.inflate(inflater)
     }
 
+    override fun setupToolbar() {
+    }
+
     override fun initView() {
     }
 

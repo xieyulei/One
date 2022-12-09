@@ -16,6 +16,9 @@ class DragItemRvFragment : BaseRecyclerFragment<RecyclerFragmentDragItemBinding>
         return RecyclerFragmentDragItemBinding.inflate(inflater)
     }
 
+    override fun setupToolbar() {
+    }
+
     override fun initView() {
 
     }

@@ -2,7 +2,7 @@ package com.xyl.one.widgets
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.xyl.one.databinding.ActivityWidgetsBinding
+import com.xyl.one.databinding.WidgetsActivityHomeBinding
 
 /**
  * Copyright (c) 2022 Raysharp.cn. All rights reserved.
@@ -13,16 +13,11 @@ import com.xyl.one.databinding.ActivityWidgetsBinding
  */
 class WidgetsActivity : AppCompatActivity() {
 
-    private lateinit var mBinding: ActivityWidgetsBinding
+    private lateinit var mBinding: WidgetsActivityHomeBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        mBinding = ActivityWidgetsBinding.inflate(layoutInflater)
+        mBinding = WidgetsActivityHomeBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
-
-//        val fragment = WidgetsFragment()
-//        supportFragmentManager.beginTransaction()
-//            .add(R.id.widgets_frame, fragment)
-//            .commit()
     }
 }

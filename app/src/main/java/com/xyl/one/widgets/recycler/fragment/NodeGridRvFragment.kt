@@ -16,6 +16,9 @@ class NodeGridRvFragment : BaseRecyclerFragment<RecyclerFragmentNodeGridBinding>
         return RecyclerFragmentNodeGridBinding.inflate(inflater)
     }
 
+    override fun setupToolbar() {
+    }
+
     override fun initView() {
     }
 }

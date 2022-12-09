@@ -16,6 +16,9 @@ class SlideDeleteRvFragment : BaseRecyclerFragment<RecyclerFragmentSlideDeleteBi
         return RecyclerFragmentSlideDeleteBinding.inflate(inflater)
     }
 
+    override fun setupToolbar() {
+    }
+
     override fun initView() {
     }
 }

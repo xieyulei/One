@@ -7,8 +7,8 @@ import android.graphics.Color
 import android.graphics.Paint
 import android.util.AttributeSet
 import android.view.View
-import com.xyl.one.animation.PropertyAnimActivity.Point
 import com.xyl.one.animation.evaluator.CircleViewEvaluator
+import com.xyl.one.animation.fragment.PropertyAnimFragment.Point
 
 /**
  * Copyright (c) 2022 Raysharp.cn. All rights reserved.
@@ -49,7 +49,7 @@ class CircleView @JvmOverloads constructor(
 
                 // 将属性动画作用到View中
                 val startPoint = Point(RADIUS * 3, RADIUS * 3) // 初始点为圆点(70,70)
-                val endPoint = Point(700f, 1000f) // 结束点为(700,1000)
+                val endPoint = Point(700f, 300f) // 结束点为(700,300)
 
                 // 创建动画对象 & 设置初始值和结束值
                 ValueAnimator.ofObject(CircleViewEvaluator(), startPoint, endPoint).apply {

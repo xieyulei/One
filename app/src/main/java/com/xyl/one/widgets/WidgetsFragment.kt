@@ -9,8 +9,8 @@ import com.xyl.one.R
 import com.xyl.one.base.BaseRecyclerFragment
 import com.xyl.one.data.RvItemBean
 import com.xyl.one.data.getWidgetsList
-import com.xyl.one.databinding.FragmentWidgetsBinding
-import com.xyl.one.databinding.RvWidgetsItemBinding
+import com.xyl.one.databinding.WidgetsFragmentHomeBinding
+import com.xyl.one.databinding.WidgetsRvItemBinding
 import com.xyl.one.utils.getString
 import com.xyl.one.utils.startActivity
 import com.xyl.one.widgets.recycler.RecyclerViewActivity
@@ -22,21 +22,23 @@ import com.xyl.one.widgets.recycler.RecyclerViewActivity
  * @author xieyulei
  * @date 2022-12-07
  */
-class WidgetsFragment : BaseRecyclerFragment<FragmentWidgetsBinding>() {
+class WidgetsFragment : BaseRecyclerFragment<WidgetsFragmentHomeBinding>() {
 
-    override fun inflateViewBinding(inflater: LayoutInflater): FragmentWidgetsBinding {
-        return FragmentWidgetsBinding.inflate(inflater)
+    override fun inflateViewBinding(inflater: LayoutInflater): WidgetsFragmentHomeBinding {
+        return WidgetsFragmentHomeBinding.inflate(inflater)
     }
 
-    override fun initView() {
+    override fun setupToolbar() {
         mBinding.widgetsToolbar.apply {
             toolbarTitle.text = getString(R.string.main_widgets)
             toolbarBackFl.setOnClickListener {
                 requireActivity().finish()
             }
         }
+    }
 
-        val mAdapter = WidgetsAdapter(R.layout.rv_widgets_item, getWidgetsList())
+    override fun initView() {
+        val mAdapter = WidgetsAdapter(R.layout.widgets_rv_item, getWidgetsList())
         mBinding.widgetsRv.apply {
             layoutManager = LinearLayoutManager(requireContext())
             adapter = mAdapter
@@ -46,7 +48,7 @@ class WidgetsFragment : BaseRecyclerFragment<FragmentWidgetsBinding>() {
     class WidgetsAdapter(@LayoutRes layoutRes: Int, data: MutableList<RvItemBean>? = null) :
         BaseQuickAdapter<RvItemBean, BaseViewHolder>(layoutRes, data) {
         override fun convert(holder: BaseViewHolder, item: RvItemBean) {
-            val binding = RvWidgetsItemBinding.bind(holder.itemView)
+            val binding = WidgetsRvItemBinding.bind(holder.itemView)
             binding.rvWidgetsItemIv.setImageResource(item.imageId)
             binding.rvWidgetsItemTv.text = item.title
 

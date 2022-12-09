@@ -6,7 +6,7 @@
 
     <include
         android:id="@+id/footer_header_toolbar"
-        layout="@layout/app_bar" />
+        layout="@layout/toolbar" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/footer_header_rv"

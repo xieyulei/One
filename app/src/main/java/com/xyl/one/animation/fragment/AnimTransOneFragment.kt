@@ -5,20 +5,21 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.xyl.one.databinding.FragmentTwoAnimBinding
+import com.xyl.one.databinding.AnimFragmentOneBinding
 
 /**
  * Copyright (c) 2022 Raysharp.cn. All rights reserved.
  *
- * TwoFragment
+ * OneFragment
  * @author xieyulei
  * @date 2022-11-30
  */
-class TwoFragment : Fragment() {
-    private lateinit var mBinding: FragmentTwoAnimBinding
+class AnimTransOneFragment : Fragment() {
+
+    private lateinit var mBinding: AnimFragmentOneBinding
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        mBinding = FragmentTwoAnimBinding.inflate(inflater, container, false)
+        mBinding = AnimFragmentOneBinding.inflate(inflater, container, false)
         return mBinding.root
     }
 }

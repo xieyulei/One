@@ -30,14 +30,16 @@ class NativeRvFragment : BaseRecyclerFragment<RecyclerFragmentNativeBinding>() {
         return RecyclerFragmentNativeBinding.inflate(inflater)
     }
 
-    override fun initView() {
+    override fun setupToolbar() {
         mBinding.nativeToolbar.apply {
             toolbarTitle.text = getString(R.string.recycler_native)
             toolbarBackFl.setOnClickListener {
                 goBack()
             }
         }
+    }
 
+    override fun initView() {
         mAdapter = NativeRvAdapter(requireContext(), getRecyclerNormalList())
         mBinding.nativeRv.apply {
             layoutManager = GridLayoutManager(requireContext(), 2)

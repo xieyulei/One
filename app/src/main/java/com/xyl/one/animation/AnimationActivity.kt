@@ -1,9 +1,8 @@
 package com.xyl.one.animation
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.xyl.one.databinding.ActivityAnimationBinding
+import com.xyl.one.databinding.AnimActivityHomeBinding
 
 /**
  * Copyright (c) 2022 Raysharp.cn. All rights reserved.
@@ -14,11 +13,11 @@ import com.xyl.one.databinding.ActivityAnimationBinding
  */
 class AnimationActivity : AppCompatActivity() {
 
-    private lateinit var mBinding: ActivityAnimationBinding
+    private lateinit var mBinding: AnimActivityHomeBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        mBinding = ActivityAnimationBinding.inflate(layoutInflater)
+        mBinding = AnimActivityHomeBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
 
 //        mBinding.btnTweenAnim.setOnClickListener {

@@ -17,6 +17,9 @@
         <action
             android:id="@+id/home_to_frame"
             app:destination="@id/frameAnimFragment" />
+        <action
+            android:id="@+id/home_to_rvItem"
+            app:destination="@id/rvItemAnimFragment" />
     </fragment>
     <fragment
         android:id="@+id/tweenAnimFragment"
@@ -40,6 +43,14 @@
         android:label="FrameAnimFragment">
         <action
             android:id="@+id/frame_to_home"
+            app:destination="@id/animationHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/rvItemAnimFragment"
+        android:name="com.xyl.one.animation.fragment.RvItemAnimFragment"
+        android:label="RvItemAnimFragment">
+        <action
+            android:id="@+id/rvItem_to_home"
             app:destination="@id/animationHomeFragment" />
     </fragment>
 </navigation>

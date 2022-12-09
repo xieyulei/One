@@ -31,28 +31,24 @@
     <string name="anim_frame">Frame Animation</string>
     <string name="anim_property">Property Animation</string>
     <string name="anim_tween">Tween Animation</string>
+    <string name="anim_list">List Item Animation</string>
+    <string name="anim_act_trans">Activity Trans Animation</string>
+    <string name="anim_frag_trans">Fragment Trans Animation</string>
     <string name="anim_frame_start">Start</string>
     <string name="anim_frame_stop">Stop</string>
     <string name="anim_tween_translate">Translate</string>
     <string name="anim_tween_rotate">Rotate</string>
     <string name="anim_tween_scale">Scale</string>
     <string name="anim_tween_alpha">Alpha</string>
+    <string name="anim_tween_one_fragment">One Fragment</string>
+    <string name="anim_tween_two_fragment">Two Fragment</string>
+    <string name="anim_property_value_animator_of_int">Value Animator-ofInt</string>
+    <string name="anim_property_object_animator_of_object">ObjectAnimator ofObject</string>
+    <string name="anim_property_object_animator_of_object_by_wrapper">ObjectAnimator ofObject By Wrapper</string>
+    <string name="anim_property_object_anim_impl_tween">ObjectAnimator implements TweenAnim</string>
+    <string name="anim_property_alpha">Alpha</string>
     <string name="anim_text_xml">XML</string>
     <string name="anim_text_code">Code</string>
 
-
-    <string name="btn_android_recyclerview">Android RecyclerView</string>
-    <string name="btn_activity_animation">Activity Animation Change</string>
-    <string name="btn_fragment_animation">Fragment Animation Change</string>
-    <string name="btn_replace_fragment">Replace Fragment</string>
-    <string name="btn_start_property_ofInt">Property ofInt</string>
-    <string name="btn_start_property_ofObject">Property ofObject</string>
-    <string name="btn_property_manual_of_object">Property 手动ofObject</string>
-    <string name="btn_property_trans_of_object">Property Trans</string>
-    <string name="title_one_fragment">One Fragment</string>
-    <string name="title_two_fragment">Two Fragment</string>
-    <string name="title_list_fragment">List Fragment</string>
-    <!--    <string name="title_frame_activity">Frame Animation</string>-->
-    <string name="title_property_activity">Property Animation</string>
 
 </resources>

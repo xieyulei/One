@@ -7,7 +7,7 @@
 
     <include
         android:id="@+id/anim_frame_toolbar"
-        layout="@layout/app_bar" />
+        layout="@layout/toolbar" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/anim_frame_xml_cv"
@@ -117,6 +117,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/vkq1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/anim_frame_xml_cv"
         tools:ignore="ContentDescription" />

@@ -19,11 +19,14 @@ class TweenAnimFragment : BaseRecyclerFragment<AnimFragmentTweenBinding>() {
         return AnimFragmentTweenBinding.inflate(inflater)
     }
 
-    override fun initView() {
+    override fun setupToolbar() {
         mBinding.animTweenToolbar.apply {
             toolbarTitle.text = getString(R.string.anim_tween)
             toolbarBackFl.setOnClickListener { goBack() }
         }
+    }
+
+    override fun initView() {
         showTweenAnimByXml()
         showTweenAnimByCode()
     }

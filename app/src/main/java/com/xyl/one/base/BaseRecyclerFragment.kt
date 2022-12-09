@@ -30,12 +30,15 @@ abstract class BaseRecyclerFragment<T : ViewBinding> : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setupToolbar()
         initView()
     }
 
     abstract fun inflateViewBinding(inflater: LayoutInflater): T
 
     abstract fun initView()
+
+    abstract fun setupToolbar()
 
     fun go(@IdRes destination: Int, bundle: Bundle? = null) {
         mNavController.navigate(destination)
