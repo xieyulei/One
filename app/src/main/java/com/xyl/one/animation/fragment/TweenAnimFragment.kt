@@ -10,7 +10,7 @@ import com.xyl.one.databinding.AnimFragmentTweenBinding
  * Copyright (c) 2022 Raysharp.cn. All rights reserved.
  *
  * PropertyAnimFragment
- * @author xieyulei
+ * @author xyl
  * @date 2022-12-08
  */
 class TweenAnimFragment : BaseRecyclerFragment<AnimFragmentTweenBinding>() {

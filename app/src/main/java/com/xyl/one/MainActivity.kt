@@ -18,7 +18,7 @@ import com.xyl.one.widgets.WidgetsActivity
  * Copyright (c) 2022 Raysharp.cn. All rights reserved.
  *
  * MainActivity:主页面
- * @author xieyulei
+ * @author xyl
  * @date 2022-11-25
  */
 class MainActivity : AppCompatActivity() {

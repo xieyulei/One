@@ -14,7 +14,7 @@ import com.xyl.one.databinding.AnimFragmentRvItemBinding
  * Copyright (c) 2022 Raysharp.cn. All rights reserved.
  *
  * RvItemAnimFragment
- * @author xieyulei
+ * @author xyl
  * @date 2022-12-09
  */
 class RvItemAnimFragment : BaseRecyclerFragment<AnimFragmentRvItemBinding>() {

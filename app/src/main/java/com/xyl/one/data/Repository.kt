@@ -12,7 +12,7 @@ import com.xyl.one.widgets.recycler.node.NodeTreeAdapter.*
  * Copyright (c) 2022 Raysharp.cn. All rights reserved.
  *
  * Repository
- * @author xieyulei
+ * @author xyl
  * @date 2022-12-07
  */
 
@@ -136,6 +136,16 @@ fun getNodeTreeListData(): MutableList<BaseNode> {
     return firstList
 }
 
+/**
+ * RecyclerView DragItem Page Data
+ */
+fun getDragItemListData(): MutableList<RvItemBean> = arrayListOf(
+    item(R.string.recycler_native, R.drawable.ic_jetpack),
+    item(R.string.recycler_footer_header, R.drawable.ic_jetpack),
+    item(R.string.recycler_node_tree, R.drawable.ic_jetpack),
+    item(R.string.recycler_node_grid, R.drawable.ic_jetpack),
+    item(R.string.recycler_drag_item, R.drawable.ic_jetpack)
+)
 /*********************************** Animation ************************************/
 
 /**

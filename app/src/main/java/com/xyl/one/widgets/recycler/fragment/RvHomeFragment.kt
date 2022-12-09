@@ -16,7 +16,7 @@ import com.xyl.one.databinding.RecyclerFragmentHomeBinding
  * Copyright (c) 2022 Raysharp.cn. All rights reserved.
  *
  * HomeRvFragment
- * @author xieyulei
+ * @author xyl
  * @date 2022-12-07
  */
 class RvHomeFragment : BaseRecyclerFragment<RecyclerFragmentHomeBinding>() {

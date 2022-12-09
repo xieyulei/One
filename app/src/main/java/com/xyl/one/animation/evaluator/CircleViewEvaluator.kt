@@ -7,7 +7,7 @@ import com.xyl.one.animation.fragment.PropertyAnimFragment.Point
  * Copyright (c) 2022 Raysharp.cn. All rights reserved.
  *
  * CircleViewEvaluator:自定义估值器（自定义如何从初始点坐标过渡到结束点坐标）
- * @author xieyulei
+ * @author xyl
  * @date 2022-11-30
  */
 class CircleViewEvaluator : TypeEvaluator<Any> {

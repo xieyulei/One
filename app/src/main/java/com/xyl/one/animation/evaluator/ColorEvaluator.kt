@@ -7,7 +7,7 @@ import kotlin.math.abs
  * Copyright (c) 2022 Raysharp.cn. All rights reserved.
  *
  * ColorEvaluator
- * @author xieyulei
+ * @author xyl
  * @date 2022-12-01
  */
 class ColorEvaluator : TypeEvaluator<Any> {

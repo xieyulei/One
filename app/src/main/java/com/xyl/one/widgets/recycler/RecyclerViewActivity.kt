@@ -8,7 +8,7 @@ import com.xyl.one.databinding.RecyclerActivityHomeBinding
  * Copyright (c) 2022 Raysharp.cn. All rights reserved.
  *
  * RecyclerViewActivity
- * @author xieyulei
+ * @author xyl
  * @date 2022-12-03
  */
 class RecyclerViewActivity : AppCompatActivity() {

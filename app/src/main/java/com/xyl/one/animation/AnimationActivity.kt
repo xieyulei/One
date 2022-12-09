@@ -8,7 +8,7 @@ import com.xyl.one.databinding.AnimActivityHomeBinding
  * Copyright (c) 2022 Raysharp.cn. All rights reserved.
  *
  * AnimationActivity:后续重构一个RecyclerView,防止动画操作item
- * @author xieyulei
+ * @author xyl
  * @date 2022-11-29
  */
 class AnimationActivity : AppCompatActivity() {

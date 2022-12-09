@@ -8,7 +8,7 @@ import com.xyl.one.databinding.JetpackActivityHomeBinding
  * Copyright (c) 2022 Raysharp.cn. All rights reserved.
  *
  * JetpackActivity
- * @author xieyulei
+ * @author xyl
  * @date 2022-12-06
  */
 class JetpackActivity : AppCompatActivity() {

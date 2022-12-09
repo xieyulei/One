@@ -8,7 +8,7 @@ import com.chad.library.adapter.base.entity.node.BaseNode
  * Copyright (c) 2022 Raysharp.cn. All rights reserved.
  *
  * NodeTreeAdapter
- * @author xieyulei
+ * @author xyl
  * @date 2022-12-05
  */
 class NodeTreeAdapter(mList: MutableList<BaseNode>? = null) : BaseNodeAdapter(mList) {

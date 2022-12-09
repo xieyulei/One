@@ -11,7 +11,7 @@ import android.view.View
  * Copyright (c) 2022 Raysharp.cn. All rights reserved.
  *
  * ColorCircleView
- * @author xieyulei
+ * @author xyl
  * @date 2022-12-01
  */
 class ColorCircleView @JvmOverloads constructor(

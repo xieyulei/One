@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/rv_item_layout"
     android:layout_width="match_parent"
-    android:layout_height="?actionBarSize">
+    android:layout_height="?actionBarSize"
+    android:background="@color/rv_item_bg_color">
 
     <ImageView
         android:id="@+id/recycler_rv_item_iv"
@@ -24,9 +25,9 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:gravity="center|start"
-        tools:text="@string/app_name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/recycler_rv_item_iv"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/app_name" />
 </androidx.constraintlayout.widget.ConstraintLayout>

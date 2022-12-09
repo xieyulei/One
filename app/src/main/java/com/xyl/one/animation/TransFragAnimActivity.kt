@@ -13,7 +13,7 @@ import com.xyl.one.databinding.AnimActivityTransFragBinding
  * Copyright (c) 2022 Raysharp.cn. All rights reserved.
  *
  * TransFragActivity
- * @author xieyulei
+ * @author xyl
  * @date 2022-11-30
  */
 class TransFragAnimActivity : AppCompatActivity() {

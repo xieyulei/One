@@ -9,7 +9,7 @@ import com.xyl.one.databinding.AnimActivityTransActBinding
  * Copyright (c) 2022 Raysharp.cn. All rights reserved.
  *
  * TransformAnimActivity:Activity进入、退出动画切换效果演示
- * @author xieyulei
+ * @author xyl
  * @date 2022-11-29
  *
  *

@@ -14,7 +14,7 @@ import com.xyl.one.animation.fragment.PropertyAnimFragment.Point
  * Copyright (c) 2022 Raysharp.cn. All rights reserved.
  *
  * CircleView
- * @author xieyulei
+ * @author xyl
  * @date 2022-11-30
  */
 class CircleView @JvmOverloads constructor(

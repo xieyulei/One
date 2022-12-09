@@ -12,7 +12,7 @@ import com.xyl.one.widgets.recycler.node.NodeTreeAdapter.SecondNode
  * Copyright (c) 2022 Raysharp.cn. All rights reserved.
  *
  * FirstProvider
- * @author xieyulei
+ * @author xyl
  * @date 2022-12-05
  */
 class SecondProvider : BaseNodeProvider() {
