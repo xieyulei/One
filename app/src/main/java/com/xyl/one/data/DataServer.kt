@@ -2,6 +2,7 @@ package com.xyl.one.data
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
+import com.chad.library.adapter.base.entity.MultiItemEntity
 import com.chad.library.adapter.base.entity.SectionEntity
 import com.chad.library.adapter.base.entity.node.BaseNode
 import com.xyl.one.R
@@ -108,6 +109,47 @@ object DataServer {
         }
         return fruitList
     }
+
+
+    /**
+     * 定义多样式RecyclerView
+     */
+    const val ITEM_TYPE_TEXT = 1
+    const val ITEM_TYPE_IMAGE = 2
+    const val ITEM_TYPE_IMAGE_TEXT = 3
+
+    private const val ITEM_TYPE_IMAGE_SPIN_SIZE = 1
+    private const val ITEM_TYPE_DEFAULT_SPIN_SIZE = 2
+    private const val ITEM_TYPE_TEXT_SPIN_SIZE = 3
+    private const val ITEM_TYPE_IMAGE_TEXT_SPIN_SIZE = 4
+
+    class QuickMultipleEntity(override val itemType: Int, val spanSize: Int, val content: String, val subContent: String = "") : MultiItemEntity
+
+    /**
+     * RecyclerView More Style Page Data
+     */
+    fun getMoreStyleListData(): MutableList<QuickMultipleEntity> = arrayListOf(
+        QuickMultipleEntity(
+            ITEM_TYPE_TEXT,
+            ITEM_TYPE_TEXT_SPIN_SIZE,
+            getString(R.string.recycler_more_style),
+            getString(R.string.recycler_more_style)
+        ),
+        QuickMultipleEntity(ITEM_TYPE_IMAGE, ITEM_TYPE_IMAGE_SPIN_SIZE, getString(R.string.recycler_more_style)),
+        QuickMultipleEntity(ITEM_TYPE_IMAGE_TEXT, ITEM_TYPE_IMAGE_TEXT_SPIN_SIZE, getString(R.string.recycler_more_style)),
+        QuickMultipleEntity(ITEM_TYPE_IMAGE_TEXT, ITEM_TYPE_DEFAULT_SPIN_SIZE, getString(R.string.recycler_more_style)),
+        QuickMultipleEntity(ITEM_TYPE_IMAGE_TEXT, ITEM_TYPE_DEFAULT_SPIN_SIZE, getString(R.string.recycler_more_style)),
+        QuickMultipleEntity(ITEM_TYPE_TEXT, ITEM_TYPE_TEXT_SPIN_SIZE, getString(R.string.recycler_more_style)),
+        QuickMultipleEntity(ITEM_TYPE_IMAGE, ITEM_TYPE_IMAGE_SPIN_SIZE, getString(R.string.recycler_more_style)),
+        QuickMultipleEntity(ITEM_TYPE_IMAGE_TEXT, ITEM_TYPE_IMAGE_TEXT_SPIN_SIZE, getString(R.string.recycler_more_style)),
+        QuickMultipleEntity(ITEM_TYPE_IMAGE_TEXT, ITEM_TYPE_DEFAULT_SPIN_SIZE, getString(R.string.recycler_more_style)),
+        QuickMultipleEntity(ITEM_TYPE_IMAGE_TEXT, ITEM_TYPE_DEFAULT_SPIN_SIZE, getString(R.string.recycler_more_style)),
+        QuickMultipleEntity(ITEM_TYPE_TEXT, ITEM_TYPE_TEXT_SPIN_SIZE, getString(R.string.recycler_more_style)),
+        QuickMultipleEntity(ITEM_TYPE_IMAGE, ITEM_TYPE_IMAGE_SPIN_SIZE, getString(R.string.recycler_more_style)),
+        QuickMultipleEntity(ITEM_TYPE_IMAGE_TEXT, ITEM_TYPE_IMAGE_TEXT_SPIN_SIZE, getString(R.string.recycler_more_style)),
+        QuickMultipleEntity(ITEM_TYPE_IMAGE_TEXT, ITEM_TYPE_DEFAULT_SPIN_SIZE, getString(R.string.recycler_more_style)),
+        QuickMultipleEntity(ITEM_TYPE_IMAGE_TEXT, ITEM_TYPE_DEFAULT_SPIN_SIZE, getString(R.string.recycler_more_style))
+    )
 
     /**
      * RecyclerView NodeTree Page Data
