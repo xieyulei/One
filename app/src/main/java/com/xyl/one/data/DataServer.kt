@@ -211,6 +211,21 @@ object DataServer {
         item(R.string.recycler_node_grid, R.drawable.ic_jetpack),
         item(R.string.recycler_drag_item, R.drawable.ic_jetpack)
     )
+
+    /**
+     * RecyclerView Slide Delete Page Data
+     */
+    fun getSlideDeleteList(): MutableList<RvItemBean> = arrayListOf(
+        item(R.string.recycler_native, R.drawable.ic_jetpack),
+        item(R.string.recycler_footer_header, R.drawable.ic_jetpack),
+        item(R.string.recycler_group, R.drawable.ic_jetpack),
+        item(R.string.recycler_more_style, R.drawable.ic_jetpack),
+        item(R.string.recycler_more_provider, R.drawable.ic_jetpack),
+        item(R.string.recycler_node_tree, R.drawable.ic_jetpack),
+        item(R.string.recycler_node_grid, R.drawable.ic_jetpack),
+        item(R.string.recycler_drag_item, R.drawable.ic_jetpack),
+        item(R.string.recycler_slide_delete, R.drawable.ic_jetpack)
+    )
     /*********************************** Animation ************************************/
 
     /**

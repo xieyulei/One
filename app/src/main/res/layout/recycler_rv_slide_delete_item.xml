@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.guanaj.easyswipemenulibrary.EasySwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:contentView="@+id/rv_slide_delete_item_content_ll"
+    app:leftMenuView="@+id/rv_slide_delete_item_left_ll"
+    app:rightMenuView="@+id/rv_slide_delete_item_right_ll">
+
+    <LinearLayout
+        android:id="@+id/rv_slide_delete_item_left_ll"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_dark"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/rv_slide_delete_item_left_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/recycler_text_share" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rv_slide_delete_item_content_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/rv_slide_delete_item_content_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            tools:text="内容区域" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rv_slide_delete_item_right_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_red_light"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/rv_slide_delete_item_right_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_blue_bright"
+            android:padding="20dp"
+            android:text="@string/recycler_text_delete" />
+
+        <TextView
+            android:id="@+id/rv_slide_delete_item_right_favorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_orange_dark"
+            android:padding="20dp"
+            android:text="@string/recycler_text_favorite" />
+    </LinearLayout>
+</com.guanaj.easyswipemenulibrary.EasySwipeMenuLayout>

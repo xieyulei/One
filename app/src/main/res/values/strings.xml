@@ -27,6 +27,8 @@
     <string name="recycler_text_data_empty">Data is empty!</string>
     <string name="recycler_text_delete">Delete</string>
     <string name="recycler_text_header">Header</string>
+    <string name="recycler_text_share">Share</string>
+    <string name="recycler_text_favorite">Favorite</string>
 
     <!--  Animation  -->
     <string name="anim_frame">Frame Animation</string>
