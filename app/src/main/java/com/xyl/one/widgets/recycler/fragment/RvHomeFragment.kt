@@ -49,6 +49,7 @@ class RvHomeFragment : BaseRecyclerFragment<RecyclerFragmentHomeBinding>() {
                 getString(R.string.recycler_footer_header) -> go(R.id.home_to_footerHeader)
                 getString(R.string.recycler_group) -> go(R.id.home_to_group)
                 getString(R.string.recycler_more_style) -> go(R.id.home_to_moreStyle)
+                getString(R.string.recycler_more_provider) -> go(R.id.home_to_moreProvider)
                 getString(R.string.recycler_node_tree) -> go(R.id.home_to_nodeTree)
                 getString(R.string.recycler_node_grid) -> go(R.id.home_to_nodeGrid)
                 getString(R.string.recycler_drag_item) -> go(R.id.home_to_dragItem)

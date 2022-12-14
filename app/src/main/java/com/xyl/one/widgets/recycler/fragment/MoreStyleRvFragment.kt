@@ -14,7 +14,7 @@ import com.xyl.one.databinding.RecyclerFragmentMoreStyleBinding
 /**
  * Copyright (c) 2022 Raysharp.cn. All rights reserved.
  *
- * FooterHeaderFragment
+ * MoreStyleRvFragment
  * @author xyl
  * @date 2022-12-07
  */
@@ -47,6 +47,10 @@ class MoreStyleRvFragment : BaseRecyclerFragment<RecyclerFragmentMoreStyleBindin
         }
     }
 
+    /**
+     * BaseMultiItemQuickAdapter：适用于类型较少，业务不复杂的场景，便于快速使用。
+     * 所有的数据类型，都必须实现MultiItemEntity接口（注意，这里不是继承抽象类，而是实现接口，避免对业务的实体类带来影响）
+     */
     class MoreStyleAdapter(data: MutableList<QuickMultipleEntity>) : BaseMultiItemQuickAdapter<QuickMultipleEntity, BaseViewHolder>(data) {
 
         init {
@@ -65,7 +69,7 @@ class MoreStyleRvFragment : BaseRecyclerFragment<RecyclerFragmentMoreStyleBindin
                     // 对于内容的处理
                 }
                 DataServer.ITEM_TYPE_IMAGE_TEXT -> {
-                    holder.setText(R.id.rv_more_style_it_item_sub_title, item.content)
+                    holder.setText(R.id.rv_iv_it_item_title, item.content)
                 }
             }
         }

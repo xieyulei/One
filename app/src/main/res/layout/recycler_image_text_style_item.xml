@@ -27,7 +27,7 @@
             tools:ignore="ContentDescription" />
 
         <TextView
-            android:id="@+id/rv_more_style_it_item_sub_title"
+            android:id="@+id/rv_iv_it_item_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="10dp"

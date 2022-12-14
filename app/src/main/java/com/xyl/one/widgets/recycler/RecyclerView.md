@@ -170,59 +170,59 @@ private fun initRecyclerView() {
 // layout_rv_item_header
 <?xml version ="1.0" encoding ="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns : android ="http://schemas.android.com/apk/res/android"
-    xmlns:app = "http://schemas.android.com/apk/res-auto"
-    android:id = "@+id/rv_item_layout"
-    android:layout_width = "match_parent"
-    android:background = "@color/theme_color"
-    android:layout_height = "wrap_content" >
-    
-    <TextView
-        android:id = "@+id/rv_item_header_title"
-        android:layout_width = "0dp"
-        android:layout_height = "?actionBarSize"
-        android:layout_marginStart = "@dimen/sp_24"
-        android:gravity = "center|start"
-        android:text = "@string/recycler_header_title"
-        android:textSize = "20sp"
-        android:textStyle = "bold"
-        app:layout_constraintBottom_toBottomOf = "parent"
-        app:layout_constraintEnd_toEndOf = "parent"
-        app:layout_constraintStart_toStartOf = "parent"
-        app:layout_constraintTop_toTopOf = "parent" />
+xmlns:app = "http://schemas.android.com/apk/res-auto"
+android:id = "@+id/rv_item_layout"
+android:layout_width = "match_parent"
+android:background = "@color/theme_color"
+android:layout_height = "wrap_content" >
+
+<TextView
+android:id = "@+id/rv_item_header_title"
+android:layout_width = "0dp"
+android:layout_height = "?actionBarSize"
+android:layout_marginStart = "@dimen/sp_24"
+android:gravity = "center|start"
+android:text = "@string/recycler_header_title"
+android:textSize = "20sp"
+android:textStyle = "bold"
+app:layout_constraintBottom_toBottomOf = "parent"
+app:layout_constraintEnd_toEndOf = "parent"
+app:layout_constraintStart_toStartOf = "parent"
+app:layout_constraintTop_toTopOf = "parent" / >
 
 </androidx.constraintlayout.widget.ConstraintLayout >
 
 // layout -- rv_item
 <?xml version ="1.0" encoding ="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns : android ="http://schemas.android.com/apk/res/android"
-    xmlns:app = "http://schemas.android.com/apk/res-auto"
-    xmlns:tools = "http://schemas.android.com/tools"
-    android:id = "@+id/rv_item_layout"
-    android:layout_width = "match_parent"
-    android:layout_height = "?actionBarSize" >
+xmlns:app = "http://schemas.android.com/apk/res-auto"
+xmlns:tools = "http://schemas.android.com/tools"
+android:id = "@+id/rv_item_layout"
+android:layout_width = "match_parent"
+android:layout_height = "?actionBarSize" >
 
-    <TextView
-        android:id = "@+id/rv_item_tv"
-        android:layout_width = "0dp"
-        android:layout_height = "0dp"
-        android:layout_marginStart = "@dimen/sp_24"
-        android:gravity = "center|start"
-        android:text = "@string/title_two_fragment"
-        app:layout_constraintBottom_toBottomOf = "parent"
-        app:layout_constraintEnd_toStartOf = "@id/rv_item_iv"
-        app:layout_constraintStart_toStartOf = "parent"
-        app:layout_constraintTop_toTopOf = "parent" />
-    
-    <ImageView
-        android:id = "@+id/rv_item_iv"
-        android:layout_width = "wrap_content"
-        android:layout_height = "wrap_content"
-        android:layout_marginEnd = "@dimen/sp_24"
-        android:src = "@mipmap/ic_launcher"
-        app:layout_constraintBottom_toBottomOf = "parent"
-        app:layout_constraintEnd_toEndOf = "parent"
-        app:layout_constraintTop_toTopOf = "parent"
-        tools:ignore = "ContentDescription" />
+<TextView
+android:id = "@+id/rv_item_tv"
+android:layout_width = "0dp"
+android:layout_height = "0dp"
+android:layout_marginStart = "@dimen/sp_24"
+android:gravity = "center|start"
+android:text = "@string/title_two_fragment"
+app:layout_constraintBottom_toBottomOf = "parent"
+app:layout_constraintEnd_toStartOf = "@id/rv_item_iv"
+app:layout_constraintStart_toStartOf = "parent"
+app:layout_constraintTop_toTopOf = "parent" / >
+
+<ImageView
+android:id = "@+id/rv_item_iv"
+android:layout_width = "wrap_content"
+android:layout_height = "wrap_content"
+android:layout_marginEnd = "@dimen/sp_24"
+android:src = "@mipmap/ic_launcher"
+app:layout_constraintBottom_toBottomOf = "parent"
+app:layout_constraintEnd_toEndOf = "parent"
+app:layout_constraintTop_toTopOf = "parent"
+tools:ignore = "ContentDescription" / >
 
 </androidx.constraintlayout.widget.ConstraintLayout >
 
@@ -232,16 +232,20 @@ private fun initRecyclerView() {
 
 ```kotlin
     多布局关键点：
-        1)构建三种类型的实体类，有子项的类，继承BaseExpandNode类，无子项的类继承BaseNode
-        2)构建每种类型对应的Provider,处理他的convert方法和onClick
-        3)构建包含层级的数据源
-        4)自定义适配器，继承自BaseNodeAdapter，添加Provider以及重写getItemType为每种类型设置一个值区分类型
-        5)RecyclerView设置adapter，layoutManager以及其他属性，放入数据源显示
+1)构建三种类型的实体类，有子项的类，继承BaseExpandNode类，无子项的类继承BaseNode
+2)构建每种类型对应的Provider,处理他的convert方法和onClick
+3)构建包含层级的数据源
+4)自定义适配器，继承自BaseNodeAdapter，添加Provider以及重写getItemType为每种类型设置一个值区分类型
+5)RecyclerView设置adapter，layoutManager以及其他属性，放入数据源显示
 
 /**
  * 折叠列表的几种类型
  */
-class FirstNode(val title: String, val imageId: Int, override val childNode: MutableList<BaseNode>?) :
+class FirstNode(
+    val title: String,
+    val imageId: Int,
+    override val childNode: MutableList<BaseNode>?
+) :
     BaseExpandNode() {
     init {
         isExpanded = false
@@ -249,14 +253,22 @@ class FirstNode(val title: String, val imageId: Int, override val childNode: Mut
 }
 
 
-class SecondNode(val title: String, val imageId: Int, override val childNode: MutableList<BaseNode>?) :
+class SecondNode(
+    val title: String,
+    val imageId: Int,
+    override val childNode: MutableList<BaseNode>?
+) :
     BaseExpandNode() {
     init {
         isExpanded = false
     }
 }
 
-class ThirdNode(val title: String, val imageId: Int, override val childNode: MutableList<BaseNode>? = null) : BaseNode()
+class ThirdNode(
+    val title: String,
+    val imageId: Int,
+    override val childNode: MutableList<BaseNode>? = null
+) : BaseNode()
 
 /**
  * 自定义Adapter
@@ -316,13 +328,15 @@ class FirstProvider : BaseNodeProvider() {
 
         if (firstNode.isExpanded) {
             if (isAnimate) {
-                ViewCompat.animate(imageArrow).setDuration(200).setInterpolator(DecelerateInterpolator()).rotation(0f).start()
+                ViewCompat.animate(imageArrow).setDuration(200)
+                    .setInterpolator(DecelerateInterpolator()).rotation(0f).start()
             } else {
                 imageArrow.rotation = 0f
             }
         } else {
             if (isAnimate) {
-                ViewCompat.animate(imageArrow).setDuration(200).setInterpolator(DecelerateInterpolator()).rotation(90f).start()
+                ViewCompat.animate(imageArrow).setDuration(200)
+                    .setInterpolator(DecelerateInterpolator()).rotation(90f).start()
             } else {
                 imageArrow.rotation = 90f
             }
@@ -331,7 +345,12 @@ class FirstProvider : BaseNodeProvider() {
 
     override fun onClick(helper: BaseViewHolder, view: View, data: BaseNode, position: Int) {
         // 这里使用payload进行增量刷新（避免整个item刷新导致的闪烁，不自然）
-        getAdapter()!!.expandOrCollapse(position, animate = true, notify = true, parentPayload = NodeTreeAdapter.EXPAND_COLLAPSE_PAYLOAD)
+        getAdapter()!!.expandOrCollapse(
+            position,
+            animate = true,
+            notify = true,
+            parentPayload = NodeTreeAdapter.EXPAND_COLLAPSE_PAYLOAD
+        )
     }
 }
 
@@ -422,6 +441,7 @@ private fun initRecyclerView() {
 ```
 
 12.设置空布局
+
 ```kotlin
 // 没有数据的时候默认显示该布局 
 val emptyView = RvEmptyBinding.inflate(layoutInflater)
@@ -430,24 +450,31 @@ mAdapter.setEmptyView(emptyView.root)
 
 13.添加拖拽、滑动删除
 
+```kotlin
+SlideDeleteRvFragment：侧滑列表 
+DragItemRvFragment:拖拽列表
+```
+        
 14.多布局
 
-15.自定义ViewHolder
-
-16.混淆
 ```kotlin
--keep class com.chad.library.adapter.** {
-*;
-}
--keep public class * extends com.chad.library.adapter.base.BaseQuickAdapter
--keep public class * extends com.chad.library.adapter.base.BaseViewHolder
--keepclassmembers  class **$** extends com.chad.library.adapter.base.BaseViewHolder {
-<init>(...);
-}
-
+MoreStyleRvFragment
 
 ```
 
+16.混淆
+
+```kotlin
+-keep class com.chad.library.adapter.* * {
+    *;
+}
+-keep public class * extends com.chad.library.adapter.base.BaseQuickAdapter
+-keep public class * extends com.chad.library.adapter.base.BaseViewHolder
+-keepclassmembers  class **$** extends com . chad . library . adapter . base . BaseViewHolder {
+    <init > (...);
+}
+
+```
 
 17.扩展框架
 

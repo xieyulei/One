@@ -32,13 +32,16 @@
         <action
             android:id="@+id/home_to_native"
             app:destination="@id/nativeRvFragment" />
+        <action
+            android:id="@+id/home_to_moreProvider"
+            app:destination="@id/moreProviderRvFragment" />
     </fragment>
     <fragment
         android:id="@+id/footerHeaderRvFragment"
         android:name="com.xyl.one.widgets.recycler.fragment.FooterHeaderRvFragment"
         android:label="FooterHeaderRvFragment">
         <action
-            android:id="@+id/action_footerHeaderRvFragment_to_homeRvFragment"
+            android:id="@+id/footerHeader_to_home"
             app:destination="@id/homeRvFragment" />
     </fragment>
     <fragment
@@ -46,7 +49,7 @@
         android:name="com.xyl.one.widgets.recycler.fragment.NodeGridRvFragment"
         android:label="GirdNodeRvFragment">
         <action
-            android:id="@+id/action_girdNodeRvFragment_to_homeRvFragment"
+            android:id="@+id/girdNode_to_home"
             app:destination="@id/homeRvFragment" />
     </fragment>
     <fragment
@@ -54,7 +57,7 @@
         android:name="com.xyl.one.widgets.recycler.fragment.DragItemRvFragment"
         android:label="DragItemRvFragment">
         <action
-            android:id="@+id/action_dragItemRvFragment_to_homeRvFragment"
+            android:id="@+id/dragItem_to_home"
             app:destination="@id/homeRvFragment" />
     </fragment>
     <fragment
@@ -62,7 +65,7 @@
         android:name="com.xyl.one.widgets.recycler.fragment.MoreStyleRvFragment"
         android:label="MoreStyleRvFragment">
         <action
-            android:id="@+id/action_moreStyleRvFragment_to_homeRvFragment"
+            android:id="@+id/moreStyle_to_home"
             app:destination="@id/homeRvFragment" />
     </fragment>
     <fragment
@@ -70,7 +73,7 @@
         android:name="com.xyl.one.widgets.recycler.fragment.SlideDeleteRvFragment"
         android:label="SlideDeleteRvFragment">
         <action
-            android:id="@+id/action_slideDeleteRvFragment_to_homeRvFragment"
+            android:id="@+id/slideDelete_to_home"
             app:destination="@id/homeRvFragment" />
     </fragment>
     <fragment
@@ -78,7 +81,7 @@
         android:name="com.xyl.one.widgets.recycler.fragment.NodeTreeRvFragment"
         android:label="TreeNodeRvFragment">
         <action
-            android:id="@+id/action_treeNodeRvFragment_to_homeRvFragment"
+            android:id="@+id/tree_to_home"
             app:destination="@id/homeRvFragment" />
     </fragment>
     <fragment
@@ -86,7 +89,7 @@
         android:name="com.xyl.one.widgets.recycler.fragment.GroupRvFragment"
         android:label="GroupRvFragment">
         <action
-            android:id="@+id/action_groupRvFragment_to_homeRvFragment"
+            android:id="@+id/group_to_home"
             app:destination="@id/homeRvFragment" />
     </fragment>
     <fragment
@@ -94,7 +97,15 @@
         android:name="com.xyl.one.widgets.recycler.fragment.NativeRvFragment"
         android:label="NativeRvFragment" >
         <action
-            android:id="@+id/action_nativeRvFragment_to_homeRvFragment"
+            android:id="@+id/native_to_home"
+            app:destination="@id/homeRvFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/moreProviderRvFragment"
+        android:name="com.xyl.one.widgets.recycler.fragment.MoreProviderRvFragment"
+        android:label="MoreProviderRvFragment" >
+        <action
+            android:id="@+id/moreProvider_to_home"
             app:destination="@id/homeRvFragment" />
     </fragment>
 </navigation>

@@ -15,6 +15,7 @@
     <string name="recycler_footer_header">Footer Header</string>
     <string name="recycler_group">Group</string>
     <string name="recycler_more_style">More Style</string>
+    <string name="recycler_more_provider">More Provider</string>
     <string name="recycler_node_tree">Node Tree</string>
     <string name="recycler_node_grid">Node Grid</string>
     <string name="recycler_drag_item">Drag Item</string>
