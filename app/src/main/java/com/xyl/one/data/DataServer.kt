@@ -70,7 +70,10 @@ object DataServer {
         item(R.string.recycler_node_tree, R.drawable.ic_recycler),
         item(R.string.recycler_node_grid, R.drawable.ic_recycler),
         item(R.string.recycler_drag_item, R.drawable.ic_recycler),
-        item(R.string.recycler_slide_delete, R.drawable.ic_recycler)
+        item(R.string.recycler_slide_delete, R.drawable.ic_recycler),
+        item(R.string.recycler_list_grid_case, R.drawable.ic_recycler),
+        item(R.string.recycler_page_case, R.drawable.ic_recycler),
+        item(R.string.recycler_message_case, R.drawable.ic_recycler)
     )
 
     /**
@@ -125,6 +128,7 @@ object DataServer {
     private const val ITEM_TYPE_IMAGE_TEXT_SPIN_SIZE = 4
 
     class QuickMultipleEntity(override val itemType: Int, val spanSize: Int, val content: String, val subContent: String = "") : MultiItemEntity
+
     /**
      * RecyclerView More Style Page Data
      */
@@ -151,7 +155,8 @@ object DataServer {
         QuickMultipleEntity(ITEM_TYPE_IMAGE_TEXT, ITEM_TYPE_DEFAULT_SPIN_SIZE, getString(R.string.recycler_more_style))
     )
 
-    class ProviderMultipleEntity( val itemType: Int, val content: String, val subContent: String = "")
+    class ProviderMultipleEntity(val itemType: Int, val content: String, val subContent: String = "")
+
     /**
      * RecyclerView More Provider Page Data
      */

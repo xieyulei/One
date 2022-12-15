@@ -23,6 +23,10 @@
     <string name="recycler_node_text_first">First</string>
     <string name="recycler_node_text_second">Second</string>
     <string name="recycler_node_text_third">Third</string>
+    <string name="recycler_list_grid_case">List Grid Case</string>
+    <string name="recycler_page_case">Page Case</string>
+    <string name="recycler_message_case">Message Case</string>
+
     <string name="recycler_text_add">Add</string>
     <string name="recycler_text_data_empty">Data is empty!</string>
     <string name="recycler_text_delete">Delete</string>

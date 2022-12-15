@@ -54,6 +54,9 @@ class RvHomeFragment : BaseRecyclerFragment<RecyclerFragmentHomeBinding>() {
                 getString(R.string.recycler_node_grid) -> go(R.id.home_to_nodeGrid)
                 getString(R.string.recycler_drag_item) -> go(R.id.home_to_dragItem)
                 getString(R.string.recycler_slide_delete) -> go(R.id.home_to_slideDelete)
+                getString(R.string.recycler_list_grid_case) -> go(R.id.home_to_listGridCase)
+                getString(R.string.recycler_page_case) -> go(R.id.home_to_pageCase)
+                getString(R.string.recycler_message_case) -> go(R.id.home_to_messageCase)
             }
         }
     }

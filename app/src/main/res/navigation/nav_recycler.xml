@@ -35,6 +35,15 @@
         <action
             android:id="@+id/home_to_moreProvider"
             app:destination="@id/moreProviderRvFragment" />
+        <action
+            android:id="@+id/home_to_listGridCase"
+            app:destination="@id/listGridCaseRvFragment" />
+        <action
+            android:id="@+id/home_to_pageCase"
+            app:destination="@id/pageCaseRvFragment" />
+        <action
+            android:id="@+id/home_to_messageCase"
+            app:destination="@id/messageCaseRvFragment" />
     </fragment>
     <fragment
         android:id="@+id/footerHeaderRvFragment"
@@ -95,7 +104,7 @@
     <fragment
         android:id="@+id/nativeRvFragment"
         android:name="com.xyl.one.widgets.recycler.fragment.NativeRvFragment"
-        android:label="NativeRvFragment" >
+        android:label="NativeRvFragment">
         <action
             android:id="@+id/native_to_home"
             app:destination="@id/homeRvFragment" />
@@ -103,9 +112,33 @@
     <fragment
         android:id="@+id/moreProviderRvFragment"
         android:name="com.xyl.one.widgets.recycler.fragment.MoreProviderRvFragment"
-        android:label="MoreProviderRvFragment" >
+        android:label="MoreProviderRvFragment">
         <action
             android:id="@+id/moreProvider_to_home"
+            app:destination="@id/homeRvFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listGridCaseRvFragment"
+        android:name="com.xyl.one.widgets.recycler.fragment.ListGridCaseRvFragment"
+        android:label="ListGridCaseRvFragment">
+        <action
+            android:id="@+id/listGridCase_to_home"
+            app:destination="@id/homeRvFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pageCaseRvFragment"
+        android:name="com.xyl.one.widgets.recycler.fragment.PageCaseRvFragment"
+        android:label="PageCaseRvFragment">
+        <action
+            android:id="@+id/pageCase_to_home"
+            app:destination="@id/homeRvFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/messageCaseRvFragment"
+        android:name="com.xyl.one.widgets.recycler.fragment.MessageCaseRvFragment"
+        android:label="MessageCaseRvFragment">
+        <action
+            android:id="@+id/messageCase_to_home"
             app:destination="@id/homeRvFragment" />
     </fragment>
 </navigation>
